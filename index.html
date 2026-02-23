@@ -1,0 +1,1042 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bell Matriculation Higher Secondary School</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <style>
+        .gold-gradient {
+            background: linear-gradient(135deg, #B8860B, #FFD700);
+        }
+
+        .school-blue {
+            background-color: #4A90E2;
+        }
+
+        .hero-clip {
+            clip-path: polygon(0 0, 100% 0, 100% 85%, 0% 100%);
+        }
+
+        .card-hover:hover {
+            transform: translateY(-10px);
+            transition: all 0.3s ease;
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+
+<body class="bg-gray-50 text-gray-800 overflow-x-hidden">
+
+    <nav class="bg-white shadow-md py-4 px-6 md:px-12 sticky top-0 z-[100]">
+        <div class="max-w-7xl mx-auto flex justify-between items-center">
+            <div class="flex items-center gap-2">
+                <img src="images/Bell-Logo_1.jpg" alt="logo" class="w-10 h-10 md:w-12 md:h-12">
+                <span class="font-bold text-lg md:text-xl tracking-tight text-blue-900 leading-none">
+                    BELL <span class="text-yellow-400">SCHOOL</span>
+                </span>
+            </div>
+
+            <div class="hidden lg:flex gap-8 font-medium text-gray-600">
+                <a href="#home" class="hover:text-yellow-600 transition">Home</a>
+                <a href="#about" class="hover:text-yellow-600 transition">About</a>
+                <a href="#academics" class="hover:text-yellow-600 transition">Academics</a>
+                <a href="#facilities" class="hover:text-yellow-600 transition">Facilities</a>
+                <a href="#admission" class="hover:text-yellow-600 transition">Admission</a>
+                <a href="#gallery" class="hover:text-yellow-600 transition">Gallery</a>
+                <a href="#Careers" class="hover:text-yellow-600 transition">Careers</a>
+            </div>
+
+            <div class="flex items-center gap-4">
+                <a href="tel:+914622574117"
+                    class="hidden sm:flex bg-blue-600 text-white px-5 py-2 text-[12px] rounded-full font-bold hover:bg-blue-700 transition items-center gap-2">
+                    <i class="fas fa-phone-alt"></i> Contact
+                </a>
+
+                <button id="menu-btn" class="lg:hidden text-blue-900 focus:outline-none">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24"
+                        stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4 6h16M4 12h16m-7 6h7" />
+                    </svg>
+                </button>
+            </div>
+        </div>
+
+        <div id="mobile-menu"
+            class="fixed inset-0 bg-white z-[110] transform translate-x-full transition-transform duration-500 ease-in-out lg:hidden flex flex-col">
+
+            <div class="flex justify-between items-center p-6 border-b border-gray-100">
+                <div class="flex items-center gap-2">
+                    <img src="images/Bell-Logo_1.jpg" alt="logo" class="w-10 h-10">
+                    <span class="font-bold text-blue-900">BELL <span class="text-yellow-500">SCHOOL</span></span>
+                </div>
+                <button id="close-btn"
+                    class="w-10 h-10 flex items-center justify-center rounded-full bg-gray-100 text-blue-900">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                        stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                </button>
+            </div>
+
+            <div class="flex flex-col px-8 py-10 gap-6 overflow-y-auto">
+                <a href="#home"
+                    class="mobile-link text-2xl font-bold text-blue-900 flex justify-between items-center group">
+                    Home <i
+                        class="fas fa-chevron-right text-sm text-gray-300 group-hover:text-yellow-500 transition"></i>
+                </a>
+                <a href="#about"
+                    class="mobile-link text-2xl font-bold text-blue-900 flex justify-between items-center group">
+                    About <i
+                        class="fas fa-chevron-right text-sm text-gray-300 group-hover:text-yellow-500 transition"></i>
+                </a>
+                <a href="#academics"
+                    class="mobile-link text-2xl font-bold text-blue-900 flex justify-between items-center group">
+                    Academics <i
+                        class="fas fa-chevron-right text-sm text-gray-300 group-hover:text-yellow-500 transition"></i>
+                </a>
+                <a href="#facilities"
+                    class="mobile-link text-2xl font-bold text-blue-900 flex justify-between items-center group">
+                    Facilities <i
+                        class="fas fa-chevron-right text-sm text-gray-300 group-hover:text-yellow-500 transition"></i>
+                </a>
+                <a href="#admission"
+                    class="mobile-link text-2xl font-bold text-blue-900 flex justify-between items-center group">
+                    Admission <i
+                        class="fas fa-chevron-right text-sm text-gray-300 group-hover:text-yellow-500 transition"></i>
+                </a>
+                <a href="#gallery"
+                    class="mobile-link text-2xl font-bold text-blue-900 flex justify-between items-center group">
+                    Gallery <i
+                        class="fas fa-chevron-right text-sm text-gray-300 group-hover:text-yellow-500 transition"></i>
+                </a>
+                <a href="#Careers"
+                    class="mobile-link text-2xl font-bold text-blue-900 flex justify-between items-center group">
+                    Careers <i
+                        class="fas fa-chevron-right text-sm text-gray-300 group-hover:text-yellow-500 transition"></i>
+                </a>
+            </div>
+
+            <div class="mt-auto p-8 bg-gray-50 border-t border-gray-100">
+                <p class="text-xs uppercase tracking-widest text-gray-400 font-bold mb-4">Quick Contact</p>
+                <div class="flex flex-col gap-3">
+                    <a href="tel:+914622574117" class="flex items-center gap-3 text-blue-900 font-semibold">
+                        <div class="w-8 h-8 rounded-full bg-blue-100 flex items-center justify-center text-blue-600">
+                            <i class="fas fa-phone-alt text-xs"></i>
+                        </div>
+                        +91 (462) 257 4117
+                    </a>
+                    <a href="mailto:bellschool1992@gmail.com"
+                        class="flex items-center gap-3 text-blue-900 font-semibold">
+                        <div
+                            class="w-8 h-8 rounded-full bg-yellow-100 flex items-center justify-center text-yellow-600">
+                            <i class="fas fa-envelope text-xs"></i>
+                        </div>
+                        bellschool1992@gmail.com
+                    </a>
+                </div>
+
+                <a href="tel:+914622574117"
+                    class="mt-8 block w-full bg-blue-600 text-white text-center py-4 rounded-xl font-bold shadow-lg shadow-blue-200">
+                    Enquire Now
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <script>
+        const menuBtn = document.getElementById('menu-btn');
+        const closeBtn = document.getElementById('close-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const mobileLinks = document.querySelectorAll('.mobile-link');
+
+        // Open Menu
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.remove('translate-x-full');
+        });
+
+        // Close Menu
+        closeBtn.addEventListener('click', () => {
+            mobileMenu.classList.add('translate-x-full');
+        });
+
+        // Close menu when a link is clicked
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('translate-x-full');
+            });
+        });
+    </script>
+
+    <section id="home" class="hero-clip school-blue min-h-screen- pt-24 pb-40 px-6 md:px-12 text-white relative">
+        <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+            <div class="reveal-left">
+                <h1 class="text-4xl md:text-6xl font-extrabold mb-6 leading-tight">
+                    Your children’s bright <br> <span class="text-yellow-400">future starts here.</span>
+                </h1>
+                <p class="text-lg mb-8 opacity-90">
+                    Founded in 1992, we provide value-based education that blends traditional values with modern
+                    teaching methodologies.
+                </p>
+                <div class="flex gap-4">
+                    <button class="bg-blue-900 px-8 py-3 rounded-md font-bold hover:bg-black transition">Explore
+                        Programs</button>
+                    <div id="openVideo" class="flex items-center gap-2 cursor-pointer hover:opacity-80 transition-opacity">
+    <div class="w-10 h-10 border border-white rounded-full flex items-center justify-center">
+        <i class="fas fa-play text-xs text-white"></i>
+    </div>
+    <span class="text-sm font-semibold text-white">Watch School Video</span>
+</div>
+
+
+                </div>
+
+                <div class="grid grid-cols-3 gap-4 mt-12 border-t border-blue-400 pt-8">
+                    <div>
+                        <h3 class="text-2xl font-bold"><span id="yearsCounter">0</span>+</h3>
+                        <p class="text-xs opacity-75">Years of Service</p>
+                    </div>
+                    <div>
+                        <h3 class="text-2xl font-bold"><span id="successCounter">0</span>%</h3>
+                        <p class="text-xs opacity-75">Public Exam Success</p>
+                    </div>
+                    <div>
+                        <h3 class="text-2xl font-bold"><span id="campusCounter">0</span> Acres</h3>
+                        <p class="text-xs opacity-75">Green Campus</p>
+                    </div>
+                </div>
+                <script>
+                    function animateCounter(id, start, end, duration) {
+                        const obj = document.getElementById(id);
+                        let startTimestamp = null;
+                        const step = (timestamp) => {
+                            if (!startTimestamp) startTimestamp = timestamp;
+                            const progress = Math.min((timestamp - startTimestamp) / duration, 1);
+                            obj.innerHTML = Math.floor(progress * (end - start) + start);
+                            if (progress < 1) {
+                                window.requestAnimationFrame(step);
+                            }
+                        };
+                        window.requestAnimationFrame(step);
+                    }
+
+                    // This triggers the animation when the section becomes visible
+                    const observer = new IntersectionObserver((entries) => {
+                        entries.forEach((entry) => {
+                            if (entry.isIntersecting) {
+                                // Values based on Bell School Content [cite: 12, 14, 10]
+                                animateCounter("yearsCounter", 0, 30, 2000);   // 30+ Years 
+                                animateCounter("successCounter", 0, 100, 2000); // 100% Pass 
+                                animateCounter("campusCounter", 0, 6, 2000);    // 6 Acres 
+                                observer.unobserve(entry.target); // Run only once
+                            }
+                        });
+                    }, { threshold: 0.5 });
+
+                    observer.observe(document.getElementById("yearsCounter").parentElement.parentElement);
+                </script>
+            </div>
+
+            <div class="relative reveal-right group">
+    <div id="slider" class="relative overflow-hidden rounded-3xl shadow-2xl aspect-[4/3] md:aspect-auto md:h-[500px]">
+        <div class="slide absolute inset-0 transition-opacity duration-1000 opacity-100">
+            <img src="images/Bell-School-car-1.png" alt="Students Learning" class="w-full h-full object-cover">
+        </div>
+        <div class="slide absolute inset-0 transition-opacity duration-1000 opacity-0">
+            <img src="images/science-lab.jpg" alt="School Campus" class="w-full h-full object-cover">
+        </div>
+        <div class="slide absolute inset-0 transition-opacity duration-1000 opacity-0">
+            <img src="images/Bell-School-building-2.png" alt="STEM Lab" class="w-full h-full object-cover">
+        </div>
+    </div>
+
+    <div class="absolute -bottom-6 -left-6 bg-white p-5 rounded-xl shadow-lg text-blue-900 hidden md:block z-20 transition-transform hover:scale-105">
+        <p class="font-bold text-lg leading-tight">Be Illustrious</p>
+        <p class="text-sm font-medium text-slate-500">Be Industrious</p>
+    </div>
+
+    <button onclick="changeSlide(-1)" class="absolute left-4 top-1/2 -translate-y-1/2 bg-white/20 hover:bg-white/40 backdrop-blur-md p-3 rounded-full text-white opacity-0 group-hover:opacity-100 transition-opacity">
+        <i class="fas fa-chevron-left"></i>
+    </button>
+    <button onclick="changeSlide(1)" class="absolute right-4 top-1/2 -translate-y-1/2 bg-white/20 hover:bg-white/40 backdrop-blur-md p-3 rounded-full text-white opacity-0 group-hover:opacity-100 transition-opacity">
+        <i class="fas fa-chevron-right"></i>
+    </button>
+
+    <div class="absolute bottom-4 right-8 flex gap-2">
+        <div class="dot w-2 h-2 rounded-full bg-white/50 transition-all cursor-pointer"></div>
+        <div class="dot w-2 h-2 rounded-full bg-white/50 transition-all cursor-pointer"></div>
+        <div class="dot w-2 h-2 rounded-full bg-white/50 transition-all cursor-pointer"></div>
+    </div>
+</div>
+
+<script>
+let currentSlide = 0;
+const slides = document.querySelectorAll('.slide');
+const dots = document.querySelectorAll('.dot');
+
+function updateSlider() {
+    slides.forEach((slide, index) => {
+        // Toggle opacity for fade effect
+        if (index === currentSlide) {
+            slide.classList.remove('opacity-0');
+            slide.classList.add('opacity-1');
+            dots[index].classList.replace('bg-white/50', 'bg-yellow-400');
+            dots[index].classList.add('w-6'); // Active dot expansion
+        } else {
+            slide.classList.remove('opacity-1');
+            slide.classList.add('opacity-0');
+            dots[index].classList.replace('bg-yellow-400', 'bg-white/50');
+            dots[index].classList.remove('w-6');
+        }
+    });
+}
+
+function changeSlide(direction) {
+    currentSlide = (currentSlide + direction + slides.length) % slides.length;
+    updateSlider();
+}
+
+// Auto-play feature
+let autoPlay = setInterval(() => changeSlide(1), 5000);
+
+// Pause auto-play when hovering
+document.querySelector('.group').addEventListener('mouseenter', () => clearInterval(autoPlay));
+document.querySelector('.group').addEventListener('mouseleave', () => {
+    autoPlay = setInterval(() => changeSlide(1), 5000);
+});
+
+// Manual dot navigation
+dots.forEach((dot, index) => {
+    dot.addEventListener('click', () => {
+        currentSlide = index;
+        updateSlider();
+    });
+});
+
+// Initial call
+updateSlider();
+</script>
+        </div>
+    </section>
+
+    <div id="videoModal" class="fixed inset-0 z-[99999] hidden items-center justify-center bg-black/90 p-4 transition-all duration-300">
+        <button id="closeVideo" class="absolute top-6 right-6 text-white text-3xl hover:text-gray-300 transition-colors">
+            <i class="fas fa-times"></i>
+        </button>
+        
+        <div class="w-full max-w-6xl aspect-video bg-black rounded-lg overflow-hidden shadow-2xl transform scale-95 transition-transform duration-300" id="modalContent">
+            <iframe 
+                id="videoPlayer"
+                class="w-full h-full" 
+                src="" 
+                frameborder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                allowfullscreen>
+            </iframe>
+        </div>
+    </div>
+
+    <section class="max-w-7xl mx-auto -mt-16 relative z-10">
+    <div class="grid md:grid-cols-3 gap-6">
+        <div class="bg-yellow-400 p-8 rounded-2xl shadow-xl card-hover reveal-bottom">
+            <i class="fas fa-microscope text-3xl mb-4 text-blue-900"></i>
+            <h3 class="text-xl font-bold mb-2 text-blue-900">Academic Excellence</h3>
+            <p class="text-sm text-blue-900/80 leading-relaxed">
+                A dynamic curriculum blending traditional values with modern STEM and Digital labs to foster critical thinking from Kindergarten to Grade 12.
+            </p>
+        </div>
+
+        <div class="bg-yellow-400 p-8 rounded-2xl shadow-xl card-hover reveal-bottom">
+            <i class="fas fa-hand-holding-heart text-3xl mb-4 text-blue-900"></i>
+            <h3 class="text-xl font-bold mb-2 text-blue-900">Ethical Leadership</h3>
+            <p class="text-sm text-blue-900/80 leading-relaxed">
+                Instilling empathy through community service, fundraisers, and environmental drives, preparing students to be compassionate global citizens.
+            </p>
+        </div>
+
+        <div class="bg-yellow-400 p-8 rounded-2xl shadow-xl card-hover reveal-bottom">
+            <i class="fas fa-tree text-3xl mb-4 text-blue-900"></i>
+            <h3 class="text-xl font-bold mb-2 text-blue-900">Sprawling Safe Campus</h3>
+            <p class="text-sm text-blue-900/80 leading-relaxed">
+                A six-acre garden campus providing a nurturing environment where discipline and freedom coexist through a strong parent-teacher partnership.
+            </p>
+        </div>
+    </div>
+</section>
+
+    <section id="about" class="py-24 max-w-7xl mx-auto overflow-hidden">
+        <div class="grid md:grid-cols-12 gap-8 items-start mb-12">
+            <div class="md:col-span-5 pt-8 h-full flex items-end reveal-bottom">
+                <div class="flex flex-col items-start gap-2 h-full justify-between">
+                    <!-- <span class="text-yellow-500 text-2xl">✦</span> -->
+                    <img src="images/School-Torch-Logo.png" alt="torch logo" class="w-16 h-auto">
+                    <h2 class="text-4xl font-extrabold text-blue-900 leading-tight">
+                        We nurture future <br> brightest minds.
+                    </h2>
+                </div>
+            </div>
+
+            <div class="md:col-span-7 reveal-right">
+                <div class="">
+                    <img src="images/Bell-School-about-1.png" class="w-full h-[300px] object-cover"
+                        alt="Students studying">
+                </div>
+            </div>
+        </div>
+
+        <div class="grid md:grid-cols-12 gap-8 items-center">
+            <div class="md:col-span-6 reveal-left">
+                <div class="">
+                    <img src="images/Bell-School-about-2.png" class="w-full h-[350px] object-cover"
+                        alt="Practical learning">
+                </div>
+            </div>
+
+            <div class="md:col-span-5 reveal-bottom">
+                <p class="text-gray-500 leading-relaxed mb-8 text-[15px]">
+                    At Bell School, our commitment is to help every child realize their full potential through a curriculum that prioritizes conceptual understanding and real-world application. By blending traditional values with modern teaching methodologies, we challenge and excite young minds from Kindergarten to Grade 12. We embrace a holistic approach that ensures academic excellence is matched by the development of strong moral character and physical vitality.
+                </p>
+                <button
+                    class="bg-[#FF6B35] hover:bg-[#e85a20] text-white px-10 py-4 rounded-xl font-bold transition-all shadow-lg hover:-translate-y-1">
+                    More About Us
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <section id="academics" class="bg-blue-900 py-24 px-6 text-white">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16 reveal-bottom">
+                <h2 class="text-4xl font-bold mb-4">Our Academic Wings</h2>
+                <p class="opacity-70">A well-defined progression ensuring continuity in learning. </p>
+            </div>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div
+                    class="bg-white/10 p-8 rounded-3xl border border-white/10 hover:bg-white/20 transition reveal-bottom">
+                    <div class="w-12 h-12 bg-yellow-400 rounded-lg flex items-center justify-center mb-6">
+                        <i class="fas fa-child text-blue-900"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">Darling Kindergarten</h3>
+                    <p class="text-sm opacity-80 mb-6">Montessori-inspired methods for Pre-KG to UKG.</p>
+                    <ul class="text-xs space-y-2 opacity-70">
+                        <li><i class="fas fa-clock mr-2"></i> 9:00 AM - 3:00 PM </li>
+                        <li><i class="fas fa-star mr-2"></i> Play-based learning </li>
+                    </ul>
+                </div>
+                <div class="bg-white/10 p-8 rounded-3xl border border-white/10 hover:bg-white/20 transition reveal-bottom"
+                    style="transition-delay: 100ms;">
+                    <div class="w-12 h-12 bg-yellow-400 rounded-lg flex items-center justify-center mb-6">
+                        <i class="fas fa-book-reader text-blue-900"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">Junior Wing</h3>
+                    <p class="text-sm opacity-80 mb-6">Building strong academic basics for Classes 1 to 5. </p>
+                    <ul class="text-xs space-y-2 opacity-70">
+                        <li><i class="fas fa-clock mr-2"></i> 8:45 AM - 4:10 PM </li>
+                        <li><i class="fas fa-palette mr-2"></i> Creativity focus </li>
+                    </ul>
+                </div>
+                <div class="bg-white/10 p-8 rounded-3xl border border-white/10 hover:bg-white/20 transition reveal-bottom"
+                    style="transition-delay: 200ms;">
+                    <div class="w-12 h-12 bg-yellow-400 rounded-lg flex items-center justify-center mb-6">
+                        <i class="fas fa-graduation-cap text-blue-900"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">Senior Wing</h3>
+                    <p class="text-sm opacity-80 mb-6">Future readiness for Classes 6 to 12. </p>
+                    <ul class="text-xs space-y-2 opacity-70">
+                        <li><i class="fas fa-clock mr-2"></i> 8:00 AM - 5:00 PM </li>
+                        <li><i class="fas fa-microscope mr-2"></i> Career specialized </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+    <style>
+        /* Smooth transition for the accordion content */
+        .accordion-content {
+            transition: max-height 0.4s ease-in-out, padding 0.4s ease-in-out, opacity 0.4s ease-in-out;
+            max-height: 0;
+            opacity: 0;
+        }
+
+        .accordion-item.active .accordion-content {
+            opacity: 1;
+        }
+    </style>
+    <section class="py-20 px-6 overflow-hidden">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+
+            <div class="lg:col-span-4 flex flex-col items-start">
+                <div class="reveal-right">
+                    <svg class="w-10 h-10 text-yellow-400 fill-current mb-4" viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12 0L14.59 9.41L24 12L14.59 14.59L12 24L9.41 14.59L0 12L9.41 9.41L12 0Z" />
+                    </svg>
+                </div>
+
+                <h2 class="text-4xl lg:text-5xl font-bold text-[#0A1D37] leading-tight mb-8 reveal-left">
+                    Answers for<br>The Questions
+                </h2>
+
+                <button
+                    class="bg-[#FF6B35] text-white px-8 py-3.5 rounded-md font-semibold hover:bg-[#e85b24] transition-colors duration-300 shadow-md reveal-bottom">
+                    Ask A Question
+                </button>
+            </div>
+
+            <div class="lg:col-span-8 flex flex-col gap-4 reveal-right">
+
+                <div class="accordion-item bg-[#FFF9F5] rounded-xl overflow-hidden">
+                    <button class="accordion-btn w-full px-6 py-5 flex justify-between items-center focus:outline-none">
+                        <span class="font-bold text-[#0A1D37] text-lg text-left">What extracurricular activities are
+                            offered?</span>
+                        <div
+                            class="icon-container flex-shrink-0 w-8 h-8 rounded-full bg-[#5B75F0] text-white flex items-center justify-center transition-colors duration-300 ml-4">
+                            <i class="fa-solid fa-play text-xs ml-0.5"></i>
+                        </div>
+                    </button>
+                    <div class="accordion-content px-6 overflow-hidden text-gray-600 leading-relaxed">
+                        <p class="pb-5">We offer a wide variety of activities including sports, arts, music, coding
+                            clubs, and leadership programs to ensure holistic development.</p>
+                    </div>
+                </div>
+
+                <div class="accordion-item bg-[#FFF9F5] rounded-xl overflow-hidden">
+                    <button class="accordion-btn w-full px-6 py-5 flex justify-between items-center focus:outline-none">
+                        <span class="font-bold text-[#0A1D37] text-lg text-left">How can parents get involved?</span>
+                        <div
+                            class="icon-container flex-shrink-0 w-8 h-8 rounded-full bg-[#5B75F0] text-white flex items-center justify-center transition-colors duration-300 ml-4">
+                            <i class="fa-solid fa-play text-xs ml-0.5"></i>
+                        </div>
+                    </button>
+                    <div class="accordion-content px-6 overflow-hidden text-gray-600 leading-relaxed">
+                        <p class="pb-5">Parents can join our active Parent-Teacher Association, volunteer for school
+                            events, or participate in our regular open house workshops.</p>
+                    </div>
+                </div>
+
+                <div class="accordion-item bg-[#FFF9F5] rounded-xl overflow-hidden active">
+                    <button class="accordion-btn w-full px-6 py-5 flex justify-between items-center focus:outline-none">
+                        <span class="font-bold text-[#0A1D37] text-lg text-left">What is the student-to-teacher
+                            ratio?</span>
+                        <div
+                            class="icon-container flex-shrink-0 w-8 h-8 rounded-full bg-[#0A1D37] text-white flex items-center justify-center transition-colors duration-300 ml-4">
+                            <i class="fa-solid fa-minus text-xs"></i>
+                        </div>
+                    </button>
+                    <div class="accordion-content px-6 overflow-hidden text-gray-600 leading-relaxed"
+                        style="max-height: 200px;">
+                        <p class="pb-5">Our ratio is approximately 22 : 1, with 1 teacher and 2 teaching assistants for
+                            every class, ensuring personalized attention for each student.</p>
+                    </div>
+                </div>
+
+                <div class="accordion-item bg-[#FFF9F5] rounded-xl overflow-hidden">
+                    <button class="accordion-btn w-full px-6 py-5 flex justify-between items-center focus:outline-none">
+                        <span class="font-bold text-[#0A1D37] text-lg text-left">What meals are provided in
+                            school?</span>
+                        <div
+                            class="icon-container flex-shrink-0 w-8 h-8 rounded-full bg-[#5B75F0] text-white flex items-center justify-center transition-colors duration-300 ml-4">
+                            <i class="fa-solid fa-play text-xs ml-0.5"></i>
+                        </div>
+                    </button>
+                    <div class="accordion-content px-6 overflow-hidden text-gray-600 leading-relaxed">
+                        <p class="pb-5">We provide nutritious, balanced hot meals prepared daily by our on-site chefs,
+                            catering to various dietary requirements and allergies.</p>
+                    </div>
+                </div>
+
+                <div class="accordion-item bg-[#FFF9F5] rounded-xl overflow-hidden">
+                    <button class="accordion-btn w-full px-6 py-5 flex justify-between items-center focus:outline-none">
+                        <span class="font-bold text-[#0A1D37] text-lg text-left">How often are parent-teacher meetings
+                            held?</span>
+                        <div
+                            class="icon-container flex-shrink-0 w-8 h-8 rounded-full bg-[#5B75F0] text-white flex items-center justify-center transition-colors duration-300 ml-4">
+                            <i class="fa-solid fa-play text-xs ml-0.5"></i>
+                        </div>
+                    </button>
+                    <div class="accordion-content px-6 overflow-hidden text-gray-600 leading-relaxed">
+                        <p class="pb-5">Formal parent-teacher meetings are held at the end of every term, though parents
+                            can request a meeting with teachers at any point during the academic year.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        // Initialize Animate on Scroll
+        AOS.init({
+            once: true, // Animation happens only once while scrolling down
+            offset: 50,
+        });
+
+        // Accordion Logic
+        document.addEventListener('DOMContentLoaded', () => {
+            const accordionBtns = document.querySelectorAll('.accordion-btn');
+
+            accordionBtns.forEach(btn => {
+                btn.addEventListener('click', function () {
+                    const currentItem = this.parentElement;
+                    const currentContent = this.nextElementSibling;
+                    const currentIconContainer = this.querySelector('.icon-container');
+
+                    const isActive = currentItem.classList.contains('active');
+
+                    // 1. Close all accordions first (Optional: remove this block to allow multiple open items)
+                    document.querySelectorAll('.accordion-item').forEach(item => {
+                        item.classList.remove('active');
+                        item.querySelector('.accordion-content').style.maxHeight = null;
+
+                        // Reset all icons to 'play' and light blue
+                        const iconCont = item.querySelector('.icon-container');
+                        iconCont.classList.remove('bg-[#0A1D37]');
+                        iconCont.classList.add('bg-[#5B75F0]');
+                        iconCont.innerHTML = '<i class="fa-solid fa-play text-xs ml-0.5"></i>';
+                    });
+
+                    // 2. If the clicked item wasn't active, open it
+                    if (!isActive) {
+                        currentItem.classList.add('active');
+                        currentContent.style.maxHeight = currentContent.scrollHeight + "px";
+
+                        // Change icon to 'minus' and dark blue
+                        currentIconContainer.classList.remove('bg-[#5B75F0]');
+                        currentIconContainer.classList.add('bg-[#0A1D37]');
+                        currentIconContainer.innerHTML = '<i class="fa-solid fa-minus text-xs"></i>';
+                    }
+                });
+            });
+        });
+    </script>
+
+
+    <section id="facilities" class="bg-[#0A1D37] py-20 px-6 overflow-hidden">
+        <div class="max-w-7xl mx-auto">
+            <div class="flex justify-between items-end mb-12">
+                <div class="reveal-left">
+                    <span class="text-blue-400 uppercase tracking-widest text-sm font-bold">Infrastructure</span>
+                    <h2 class="text-white text-4xl font-bold mt-2">Salient Facilities</h2>
+                </div>
+                <div class="flex gap-4 reveal-right">
+                    <button
+                        class="swiper-prev w-12 h-12 rounded-full border border-gray-600 text-white flex items-center justify-center hover:bg-white hover:text-[#0A1D37] transition">
+                        <i class="fas fa-arrow-left"></i>
+                    </button>
+                    <button
+                        class="swiper-next w-12 h-12 rounded-full bg-[#FF6B35] text-white flex items-center justify-center hover:bg-[#e85a20] transition">
+                        <i class="fas fa-arrow-right"></i>
+                    </button>
+                </div>
+            </div>
+
+            <div class="swiper class-swiper reveal-bottom" data-aos-delay="200">
+                <div class="swiper-wrapper">
+
+                    <div class="swiper-slide h-auto">
+                        <div
+                            class="bg-white rounded-3xl p-8 h-full flex flex-col items-center text-center group hover:bg-blue-600 transition-colors duration-500">
+                            <div
+                                class="w-32 h-32 rounded-full overflow-hidden mb-6 border-4 border-gray-100 group-hover:border-white/30">
+                                <img src="images/science-lab.jpg" class="w-full h-full object-cover" alt="Science Lab">
+                            </div>
+                            <h3 class="text-2xl font-bold text-blue-900 group-hover:text-white mb-2">Modern Labs</h3>
+                            <p class="text-gray-500 group-hover:text-white/80 text-sm mb-4">Physics, Chemistry, and
+                                Biology laboratories equipped for practical discovery.</p>
+                            <div class="mt-auto pt-6">
+                                <p
+                                    class="text-xs font-bold uppercase tracking-widest text-gray-400 group-hover:text-white/60">
+                                    Equipment</p>
+                                <p class="text-blue-600 group-hover:text-white font-semibold">State-of-the-Art</p>
+                            </div>
+                            <a href="#facilities"
+                                class="mt-6 inline-block font-bold text-blue-900 group-hover:text-white underline decoration-yellow-400 underline-offset-8 transition-all">Explore
+                                Labs</a>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide h-auto">
+                        <div
+                            class="bg-white rounded-3xl p-8 h-full flex flex-col items-center text-center group hover:bg-blue-600 transition-colors duration-500">
+                            <div
+                                class="w-32 h-32 rounded-full overflow-hidden mb-6 border-4 border-gray-100 group-hover:border-white/30">
+                                <img src="images/digital-lab.jpg" class="w-full h-full object-cover" alt="Digital Lab">
+                            </div>
+                            <h3 class="text-2xl font-bold text-blue-900 group-hover:text-white mb-2">Digital & Art Lab
+                            </h3>
+                            <p class="text-gray-500 group-hover:text-white/80 text-sm mb-4">A creative space for
+                                animation, filmmaking, and graphic design storytelling.</p>
+                            <div class="mt-auto pt-6">
+                                <p
+                                    class="text-xs font-bold uppercase tracking-widest text-gray-400 group-hover:text-white/60">
+                                    Technology</p>
+                                <p class="text-blue-600 group-hover:text-white font-semibold">Adobe Creative Suite</p>
+                            </div>
+                            <a href="#facilities"
+                                class="mt-6 inline-block font-bold text-blue-900 group-hover:text-white underline decoration-yellow-400 underline-offset-8 transition-all">See
+                                Creative Lab</a>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide h-auto">
+                        <div
+                            class="bg-white rounded-3xl p-8 h-full flex flex-col items-center text-center group hover:bg-blue-600 transition-colors duration-500">
+                            <div
+                                class="w-32 h-32 rounded-full overflow-hidden mb-6 border-4 border-gray-100 group-hover:border-white/30">
+                                <img src="images/rifle-range.png" class="w-full h-full object-cover" alt="Rifle Range">
+                            </div>
+                            <h3 class="text-2xl font-bold text-blue-900 group-hover:text-white mb-2">Rifle Shooting</h3>
+                            <p class="text-gray-500 group-hover:text-white/80 text-sm mb-4">Olympic recognized sport
+                                facility training students in focus and precision.</p>
+                            <div class="mt-auto pt-6">
+                                <p
+                                    class="text-xs font-bold uppercase tracking-widest text-gray-400 group-hover:text-white/60">
+                                    Discipline</p>
+                                <p class="text-blue-600 group-hover:text-white font-semibold">Professional Coaching</p>
+                            </div>
+                            <a href="#facilities"
+                                class="mt-6 inline-block font-bold text-blue-900 group-hover:text-white underline decoration-yellow-400 underline-offset-8 transition-all">View
+                                Range</a>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide h-auto">
+                        <div
+                            class="bg-white rounded-3xl p-8 h-full flex flex-col items-center text-center group hover:bg-blue-600 transition-colors duration-500">
+                            <div
+                                class="w-32 h-32 rounded-full overflow-hidden mb-6 border-4 border-gray-100 group-hover:border-white/30">
+                                <img src="images/library.jpg" class="w-full h-full object-cover" alt="Library">
+                            </div>
+                            <h3 class="text-2xl font-bold text-blue-900 group-hover:text-white mb-2">Knowledge Hub</h3>
+                            <p class="text-gray-500 group-hover:text-white/80 text-sm mb-4">A vast collection of
+                                reference materials and literature for lifelong learning.</p>
+                            <div class="mt-auto pt-6">
+                                <p
+                                    class="text-xs font-bold uppercase tracking-widest text-gray-400 group-hover:text-white/60">
+                                    Resources</p>
+                                <p class="text-blue-600 group-hover:text-white font-semibold">Digital & Print</p>
+                            </div>
+                            <a href="#facilities"
+                                class="mt-6 inline-block font-bold text-blue-900 group-hover:text-white underline decoration-yellow-400 underline-offset-8 transition-all">Visit
+                                Library</a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <script>
+        // Initialize Scroll Animations
+        AOS.init({ duration: 1000, once: true });
+
+        // Initialize Class Carousel
+        const swiper = new Swiper('.class-swiper', {
+            slidesPerView: 1,
+            spaceBetween: 20,
+            loop: true,
+            grabCursor: true,
+            autoplay: {
+                delay: 4000,
+                disableOnInteraction: false,
+            },
+            navigation: {
+                nextEl: '.swiper-next',
+                prevEl: '.swiper-prev',
+            },
+            breakpoints: {
+                // Mobile: 1 card
+                640: {
+                    slidesPerView: 2,
+                    spaceBetween: 20,
+                },
+                // Desktop: 3 cards
+                1024: {
+                    slidesPerView: 3,
+                    spaceBetween: 30,
+                },
+            },
+        });
+    </script>
+
+
+    <style>
+        /* Custom image heights to match the specific visual weight of the reference */
+        .img-tall {
+            height: 500px;
+        }
+
+        .img-med {
+            height: 440px;
+        }
+
+        .img-small {
+            height: 200px;
+        }
+
+        .img-wide {
+            height: 320px;
+        }
+    </style>
+
+    <div class="max-w-7xl mx-auto py-24">
+        <div class="grid grid-cols-1 md:grid-cols-12 gap-4 items-start">
+
+            <div class="md:col-span-3 flex flex-col items-center md:items-start">
+                <div class="w-full overflow-hidden rounded-sm mb-6 reveal-left">
+                    <img src="images/Bell-School-about-1.png" alt="Outdoor Learning"
+                        class="w-full img-tall object-cover hover:scale-105 transition-transform duration-700">
+                </div>
+                <button
+                    class="px-8 py-2 border border-slate-400 rounded-full text-sm text-slate-700 hover:bg-slate-50 transition-colors reveal-bottom">
+                    See All Photos
+                </button>
+            </div>
+
+            <div class="md:col-span-3 flex flex-col md:pt-10">
+                <div class="mb-6 reveal-right">
+                    <span class="text-[10px] uppercase tracking-[0.2em] font-bold text-slate-400">Gallery</span>
+                    <h2 class="text-4xl font-bold text-[#1e293b] mt-1">Our School Life </h2>
+                </div>
+                <div class="w-full overflow-hidden rounded-sm reveal-bottom">
+                    <img src="images/Bell-School-about-2.png" alt="Classroom Engagement"
+                        class="w-full img-med object-cover hover:scale-105 transition-transform duration-700">
+                </div>
+            </div>
+
+            <div class="md:col-span-6 flex flex-col space-y-6">
+                <div class="flex gap-2 items-end reveal-right">
+                    <div class="w-5/6" style="transition-delay: 400ms;">
+                        <p class="text-slate-500 text-sm leading-relaxed ">
+                            Explore the vibrant life at Bell School through our gallery, capturing the energy and
+                            creativity of our students.
+                        </p>
+                    </div>
+
+                    <div class="w-3/6 overflow-hidden rounded-sm">
+                        <img src="images/Bell-School-about-3.png" alt="Students Entrance"
+                            class="w-full img-small object-cover hover:scale-105 transition-transform duration-700">
+                    </div>
+                </div>
+
+
+                <div class="w-full overflow-hidden rounded-sm reveal-bottom">
+                    <img src="images/Bell-School-about-4.png" alt="Joyful Learning"
+                        class="w-full img-wide object-cover hover:scale-105 transition-transform duration-700">
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+
+
+
+    <!-- Footer -->
+    <footer class="bg-yellow-950 text-white pt-16 pb-8">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+                <!-- About -->
+                <div class="space-y-6">
+                    <div class="flex items-center gap-3 bg-white/10 p-4 rounded-xl w-fit reveal-left">
+                        <img src="images/Bell-Logo_1.jpg" alt="Bell School Logo"
+                            class="h-12 w-auto bg-white rounded-md p-1">
+                        <div>
+                            <h3 class="text-white font-bold text-lg">Bell School</h3>
+                            <p class="text-white/60 text-[10px] uppercase tracking-wider">Est. 1992</p>
+                        </div>
+                    </div>
+                    <p class="text-white/70 text-sm leading-relaxed reveal-left">
+                        A caring and collaborative learning institution, preparing students for personal and
+                        professional success in the global community.
+                    </p>
+                    <div class="flex gap-4 reveal-bottom">
+                        <a href="#"
+                            class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-primary hover:text-dark transition-all">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#"
+                            class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-primary hover:text-dark transition-all">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#"
+                            class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-primary hover:text-dark transition-all">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                        <a href="#"
+                            class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-primary hover:text-dark transition-all">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div class="reveal-left">
+                    <h4 class="text-primary font-bold text-xl mb-6">Quick Links</h4>
+                    <ul class="space-y-3 text-sm text-white/80">
+                        <li><a href="about.html"
+                                class="hover:text-primary transition-colors hover:translate-x-1 inline-block">About
+                                Us</a></li>
+                        <li><a href="academic.html"
+                                class="hover:text-primary transition-colors hover:translate-x-1 inline-block">Academics</a>
+                        </li>
+                        <li><a href="admission.html"
+                                class="hover:text-primary transition-colors hover:translate-x-1 inline-block">Admission
+                                Process</a></li>
+                        <li><a href="facilities.html"
+                                class="hover:text-primary transition-colors hover:translate-x-1 inline-block">Campus
+                                Facilities</a></li>
+                        <li><a href="gallery.html"
+                                class="hover:text-primary transition-colors hover:translate-x-1 inline-block">Photo
+                                Gallery</a></li>
+                        <li><a href="careers.html"
+                                class="hover:text-primary transition-colors hover:translate-x-1 inline-block">Careers</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Contact Info -->
+                <div class="reveal-left">
+                    <h4 class="text-primary font-bold text-xl mb-6">Contact Us</h4>
+                    <ul class="space-y-4 text-sm text-white/80">
+                        <li class="flex items-center gap-3">
+                            <i class="fas fa-phone-alt text-primary shrink-0"></i>
+                            <a href="tel:+914622574117" class="hover:text-white transition-colors">+91 (462) 257
+                                4117</a>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <i class="fab fa-whatsapp text-primary shrink-0"></i>
+                            <a href="tel:+919944674550" class="hover:text-white transition-colors">+91 99446 74550</a>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <i class="far fa-envelope text-primary shrink-0"></i>
+                            <a href="mailto:bellschool1992@gmail.com"
+                                class="hover:text-white transition-colors">bellschool1992@gmail.com</a>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="fas fa-map-marker-alt text-primary shrink-0 mt-1"></i>
+                            <span>Tiruchendur Road,<br> Kamaraj Nagar, Palayankottai,<br> Tirunelveli - 627 002</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- School Hours -->
+                <div class="reveal-left">
+                    <h4 class="text-primary font-bold text-xl mb-6">School Hours</h4>
+                    <div class="bg-white/5 p-6 rounded-lg space-y-3">
+                        <div>
+                            <p class="text-[10px] text-white/60 mb-1 uppercase tracking-widest">Pre-KG to UKG</p>
+                            <p class="text-sm font-medium">9:00 AM - 3:00 PM</p>
+                        </div>
+                        <div>
+                            <p class="text-[10px] text-white/60 mb-1 uppercase tracking-widest">Classes 1 to 9</p>
+                            <p class="text-sm font-medium">8:45 AM - 4:10 PM</p>
+                        </div>
+                        <div>
+                            <p class="text-[10px] text-white/60 mb-1 uppercase tracking-widest">Classes 10 to 12</p>
+                            <p class="text-sm font-medium">8:00 AM - 5:00 PM</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="border-t border-white/10 pt-8 text-center reveal-bottom">
+                <p class="text-[10px] text-white/40 uppercase tracking-widest">
+                    &copy; <span id="current-year"></span> Bell Matriculation Higher Secondary School. All rights
+                    reserved.
+                </p>
+                <p class="text-[10px] text-white/40 mt-2">
+                    Designed with <i class="fas fa-heart text-red-500"></i> for EDU WEB TECHNOLOGIES
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const sr = ScrollReveal({
+            origin: 'top',
+            distance: '60px',
+            duration: 2000,
+            delay: 400,
+            reset: true
+        });
+
+        sr.reveal('.reveal-bottom', { origin: 'bottom' });
+        sr.reveal('.reveal-left', { origin: 'left' });
+        sr.reveal('.reveal-right', { origin: 'right' });
+    </script>
+
+
+<script>
+const openBtn = document.getElementById('openVideo');
+const closeBtnN = document.getElementById('closeVideo');
+const modal = document.getElementById('videoModal');
+const modalContent = document.getElementById('modalContent');
+const videoPlayer = document.getElementById('videoPlayer');
+
+// The Video URL (Add ?autoplay=1 to play immediately on open)
+const videoSrc = "https://www.youtube.com/watch?v=A1a_oepsYy8?autoplay=1";
+
+openBtn.addEventListener('click', () => {
+    // 1. Show Modal
+    modal.classList.remove('hidden');
+    modal.classList.add('flex');
+    
+    // 2. Set Video Source (Starts loading/playing)
+    videoPlayer.src = videoSrc;
+    
+    // 3. Simple Animation trigger
+    setTimeout(() => {
+        modalContent.classList.remove('scale-95');
+        modalContent.classList.add('scale-100');
+    }, 10);
+});
+
+const closeModal = () => {
+    // 1. Hide Modal
+    modal.classList.add('hidden');
+    modal.classList.remove('flex');
+    
+    // 2. Reset Video Source (Stops the audio/video)
+    videoPlayer.src = "";
+    
+    // 3. Reset Animation state
+    modalContent.classList.remove('scale-100');
+    modalContent.classList.add('scale-95');
+};
+
+// Close on Button Click
+closeBtnN.addEventListener('click', closeModal);
+
+// Close on Clicking Outside the video box
+modal.addEventListener('click', (e) => {
+    if (e.target === modal) {
+        closeModal();
+    }
+});
+
+// Close on 'Escape' key
+document.addEventListener('keydown', (e) => {
+    if (e.key === "Escape" && !modal.classList.contains('hidden')) {
+        closeModal();
+    }
+});
+</script>
+</body>
+
+</html>

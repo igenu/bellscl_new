@@ -196,174 +196,7 @@
         });
     </script>
 
-    <!-- <section id="home" class="hero-clip school-blue min-h-screen- pt-20 pb-40 px-6 md:px-12 text-white relative">
-        <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center">
-            <div class="reveal-left">
-                <h1 class="text-4xl md:text-6xl font-extrabold mb-6 leading-tight">
-                    Your children’s bright <br> <span class="text-yellow-400">future starts here.</span>
-                </h1>
-                <p class="text-lg mb-8 opacity-90">
-                    Founded in 1992, we provide value-based education that blends traditional values with modern
-                    teaching methodologies.
-                </p>
-                <div class="flex gap-4">
-                    <button class="bg-blue-900 px-8 py-3 rounded-md font-bold hover:bg-black transition">Explore
-                        Programs</button>
-                    <div id="openVideo" class="flex items-center gap-2 cursor-pointer hover:opacity-80 transition-opacity">
-    <div class="w-10 h-10 border border-white rounded-full flex items-center justify-center">
-        <i class="fas fa-play text-xs text-white"></i>
-    </div>
-    <span class="text-sm font-semibold text-white">Watch School Video</span>
-</div>
-
-
-                </div>
-
-                <div class="grid grid-cols-3 gap-4 mt-12 border-t border-blue-400 pt-8">
-                    <div>
-                        <h3 class="text-2xl font-bold"><span id="yearsCounter">0</span>+</h3>
-                        <p class="text-xs opacity-75">Years of Service</p>
-                    </div>
-                    <div>
-                        <h3 class="text-2xl font-bold"><span id="successCounter">0</span>%</h3>
-                        <p class="text-xs opacity-75">Public Exam Success</p>
-                    </div>
-                    <div>
-                        <h3 class="text-2xl font-bold"><span id="campusCounter">0</span> Acres</h3>
-                        <p class="text-xs opacity-75">Green Campus</p>
-                    </div>
-                </div>
-                <script>
-                    function animateCounter(id, start, end, duration) {
-                        const obj = document.getElementById(id);
-                        let startTimestamp = null;
-                        const step = (timestamp) => {
-                            if (!startTimestamp) startTimestamp = timestamp;
-                            const progress = Math.min((timestamp - startTimestamp) / duration, 1);
-                            obj.innerHTML = Math.floor(progress * (end - start) + start);
-                            if (progress < 1) {
-                                window.requestAnimationFrame(step);
-                            }
-                        };
-                        window.requestAnimationFrame(step);
-                    }
-
-                    // This triggers the animation when the section becomes visible
-                    const observer = new IntersectionObserver((entries) => {
-                        entries.forEach((entry) => {
-                            if (entry.isIntersecting) {
-                                // Values based on Bell School Content [cite: 12, 14, 10]
-                                animateCounter("yearsCounter", 0, 30, 2000);   // 30+ Years 
-                                animateCounter("successCounter", 0, 100, 2000); // 100% Pass 
-                                animateCounter("campusCounter", 0, 6, 2000);    // 6 Acres 
-                                observer.unobserve(entry.target); // Run only once
-                            }
-                        });
-                    }, { threshold: 0.5 });
-
-                    observer.observe(document.getElementById("yearsCounter").parentElement.parentElement);
-                </script>
-            </div>
-
-            <div class="relative reveal-right group">
-    <div id="slider" class="relative overflow-hidden rounded-3xl shadow-2xl aspect-[4/3] md:aspect-auto md:h-[500px]">
-        <div class="slide absolute inset-0 transition-opacity duration-1000 opacity-100">
-            <img src="images/Bell-School-car-1.png" alt="Students Learning" class="w-full h-full object-cover">
-        </div>
-        <div class="slide absolute inset-0 transition-opacity duration-1000 opacity-0">
-            <img src="images/science-lab.jpg" alt="School Campus" class="w-full h-full object-cover">
-        </div>
-        <div class="slide absolute inset-0 transition-opacity duration-1000 opacity-0">
-            <img src="images/Bell-School-building-2.png" alt="STEM Lab" class="w-full h-full object-cover">
-        </div>
-    </div>
-
-    <div class="absolute -bottom-6 -left-6 bg-white p-5 rounded-xl shadow-lg text-blue-900 hidden md:block z-20 transition-transform hover:scale-105">
-        <p class="font-bold text-lg leading-tight">Be Illustrious</p>
-        <p class="text-sm font-medium text-slate-500">Be Industrious</p>
-    </div>
-
-    <button onclick="changeSlide(-1)" class="absolute left-4 top-1/2 -translate-y-1/2 bg-white/20 hover:bg-white/40 backdrop-blur-md p-3 rounded-full text-white opacity-0 group-hover:opacity-100 transition-opacity">
-        <i class="fas fa-chevron-left"></i>
-    </button>
-    <button onclick="changeSlide(1)" class="absolute right-4 top-1/2 -translate-y-1/2 bg-white/20 hover:bg-white/40 backdrop-blur-md p-3 rounded-full text-white opacity-0 group-hover:opacity-100 transition-opacity">
-        <i class="fas fa-chevron-right"></i>
-    </button>
-
-    <div class="absolute bottom-4 right-8 flex gap-2">
-        <div class="dot w-2 h-2 rounded-full bg-white/50 transition-all cursor-pointer"></div>
-        <div class="dot w-2 h-2 rounded-full bg-white/50 transition-all cursor-pointer"></div>
-        <div class="dot w-2 h-2 rounded-full bg-white/50 transition-all cursor-pointer"></div>
-    </div>
-</div>
-
-<script>
-let currentSlide = 0;
-const slides = document.querySelectorAll('.slide');
-const dots = document.querySelectorAll('.dot');
-
-function updateSlider() {
-    slides.forEach((slide, index) => {
-        // Toggle opacity for fade effect
-        if (index === currentSlide) {
-            slide.classList.remove('opacity-0');
-            slide.classList.add('opacity-1');
-            dots[index].classList.replace('bg-white/50', 'bg-yellow-400');
-            dots[index].classList.add('w-6'); // Active dot expansion
-        } else {
-            slide.classList.remove('opacity-1');
-            slide.classList.add('opacity-0');
-            dots[index].classList.replace('bg-yellow-400', 'bg-white/50');
-            dots[index].classList.remove('w-6');
-        }
-    });
-}
-
-function changeSlide(direction) {
-    currentSlide = (currentSlide + direction + slides.length) % slides.length;
-    updateSlider();
-}
-
-// Auto-play feature
-let autoPlay = setInterval(() => changeSlide(1), 5000);
-
-// Pause auto-play when hovering
-document.querySelector('.group').addEventListener('mouseenter', () => clearInterval(autoPlay));
-document.querySelector('.group').addEventListener('mouseleave', () => {
-    autoPlay = setInterval(() => changeSlide(1), 5000);
-});
-
-// Manual dot navigation
-dots.forEach((dot, index) => {
-    dot.addEventListener('click', () => {
-        currentSlide = index;
-        updateSlider();
-    });
-});
-
-// Initial call
-updateSlider();
-</script>
-        </div>
-    </section> -->
-
-    <!-- <div id="videoModal" class="fixed inset-0 z-[99999] hidden items-center justify-center bg-black/90 p-4 transition-all duration-300">
-        <button id="closeVideo" class="absolute top-6 right-6 text-white text-3xl hover:text-gray-300 transition-colors">
-            <i class="fas fa-times"></i>
-        </button>
-        
-        <div class="w-full max-w-6xl aspect-video bg-black rounded-lg overflow-hidden shadow-2xl transform scale-95 transition-transform duration-300" id="modalContent">
-            <iframe 
-                id="videoPlayer"
-                class="w-full h-full" 
-                src="" 
-                frameborder="0" 
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                allowfullscreen>
-            </iframe>
-        </div>
-    </div> -->
-
+    
     <div class="swiper mainHero h-[80vh] md:h-[88vh] relative">
         <div class="swiper-wrapper">
             <div class="swiper-slide relative flex items-center px-8">
@@ -372,13 +205,13 @@ updateSlider();
                 <div class="w-[80rem] mx-auto relative z-10 text-white">
                     <div class="max-w-3xl slide-content">
                         <h5 class="flex items-center gap-3 text-[#f9a134] font-bold tracking-[0.2em] uppercase mb-4">
-                            <i class="fas fa-graduation-cap"></i> WELCOME TO EDUCA!
+                            <i class="fas fa-graduation-cap"></i> WELCOME TO Bell School!
                         </h5>
                         <h1 class="text-3xl md:text-5xl font-extrabold leading-tight mb-6">
                             Start Your Beautiful <br>And <span class="text-[#f9a134] italic">Bright</span> Future
                         </h1>
                         <p class="text-lg text-slate-200 mb-8 max-w-xl">
-                            There are many variations of passages lorem ipsum available but the majority have suffered alteration in some form.
+                            Bell Matriculation Higher Secondary School provides a foundation of academic excellence combined with strong moral values.
                         </p>
                         <div class="flex gap-4">
                             <button class="bg-[#f9a134] hover:bg-white hover:text-[#066a4c] px-6 py-3 rounded font-bold transition-all text-[15px]">ABOUT MORE <i class="fas fa-arrow-right ml-2"></i></button>
@@ -394,6 +227,9 @@ updateSlider();
                     <div class="max-w-3xl slide-content">
                         <h5 class="flex items-center gap-3 text-[#f9a134] font-bold tracking-[0.2em] uppercase mb-4">WORLD CLASS EDUCATION</h5>
                         <h1 class="text-3xl md:text-5xl font-extrabold leading-tight mb-6">Empowering The <br><span class="text-[#f9a134] italic">Next</span> Generation</h1>
+                        <p class="text-lg text-slate-200 mb-8 max-w-xl">
+                            Consistently producing state and district ranks through dedicated teaching and modern infrastructure.
+                        </p>
                         <button class="bg-[#f9a134] hover:bg-white hover:text-[#066a4c] px-6 py-3 rounded font-bold transition-all text-[15px]">EXPLORE NOW</button>
                     </div>
                 </div>
@@ -695,9 +531,10 @@ updateSlider();
                         class="w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-opacity duration-700"
                         muted 
                         loop 
+                        autoplay
                         playsinline
-                        poster="images/video-poster.jpg">
-                        <source src="your-video-file.mp4" type="video/mp4">
+                        poster="../BANNER-VIDEO.mp4">
+                        <source src="../BANNER-VIDEO.mp4" type="video/mp4">
                         Your browser does not support the video tag.
                     </video>
 

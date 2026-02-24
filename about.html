@@ -1,0 +1,659 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bell Matriculation Higher Secondary School</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <style>
+        .gold-gradient {
+            background: linear-gradient(135deg, #B8860B, #FFD700);
+        }
+
+        .school-blue {
+            background-color: #4A90E2;
+        }
+
+        .hero-clip {
+            clip-path: polygon(0 0, 100% 0, 100% 85%, 0% 100%);
+        }
+
+        .card-hover:hover {
+            transform: translateY(-10px);
+            transition: all 0.3s ease;
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+
+<body class="bg-gray-50 text-gray-800 overflow-x-hidden">
+
+    <nav class="bg-white shadow-md py-4 px-6 md:px-12 sticky top-0 z-[100]">
+        <div class="max-w-7xl mx-auto flex justify-between items-center">
+            <div class="flex items-center gap-2">
+                <img src="images/Bell-Logo_1.jpg" alt="logo" class="w-10 h-10 md:w-12 md:h-12">
+                <span class="font-bold text-lg md:text-xl tracking-tight text-blue-900 leading-none">
+                    BELL <span class="text-yellow-400">SCHOOL</span>
+                </span>
+            </div>
+
+            <div class="hidden lg:flex gap-8 font-medium text-gray-600">
+                <a href="#home" class="hover:text-yellow-600 transition">Home</a>
+                <a href="#about" class="hover:text-yellow-600 transition">About</a>
+                <a href="#academics" class="hover:text-yellow-600 transition">Academics</a>
+                <a href="#facilities" class="hover:text-yellow-600 transition">Facilities</a>
+                <a href="#admission" class="hover:text-yellow-600 transition">Admission</a>
+                <a href="#gallery" class="hover:text-yellow-600 transition">Gallery</a>
+                <a href="#Careers" class="hover:text-yellow-600 transition">Careers</a>
+            </div>
+
+            <div class="flex items-center gap-4">
+                <a href="tel:+914622574117"
+                    class="hidden sm:flex bg-blue-600 text-white px-5 py-2 text-[12px] rounded-full font-bold hover:bg-blue-700 transition items-center gap-2">
+                    <i class="fas fa-phone-alt"></i> Contact
+                </a>
+
+                <button id="menu-btn" class="lg:hidden text-blue-900 focus:outline-none">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24"
+                        stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4 6h16M4 12h16m-7 6h7" />
+                    </svg>
+                </button>
+            </div>
+        </div>
+
+        <div id="mobile-menu"
+            class="fixed inset-0 bg-white z-[110] transform translate-x-full transition-transform duration-500 ease-in-out lg:hidden flex flex-col">
+
+            <div class="flex justify-between items-center p-6 border-b border-gray-100">
+                <div class="flex items-center gap-2">
+                    <img src="images/Bell-Logo_1.jpg" alt="logo" class="w-10 h-10">
+                    <span class="font-bold text-blue-900">BELL <span class="text-yellow-500">SCHOOL</span></span>
+                </div>
+                <button id="close-btn"
+                    class="w-10 h-10 flex items-center justify-center rounded-full bg-gray-100 text-blue-900">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                        stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                </button>
+            </div>
+
+            <div class="flex flex-col px-8 py-10 gap-6 overflow-y-auto">
+                <a href="#home"
+                    class="mobile-link text-2xl font-bold text-blue-900 flex justify-between items-center group">
+                    Home <i
+                        class="fas fa-chevron-right text-sm text-gray-300 group-hover:text-yellow-500 transition"></i>
+                </a>
+                <a href="#about"
+                    class="mobile-link text-2xl font-bold text-blue-900 flex justify-between items-center group">
+                    About <i
+                        class="fas fa-chevron-right text-sm text-gray-300 group-hover:text-yellow-500 transition"></i>
+                </a>
+                <a href="#academics"
+                    class="mobile-link text-2xl font-bold text-blue-900 flex justify-between items-center group">
+                    Academics <i
+                        class="fas fa-chevron-right text-sm text-gray-300 group-hover:text-yellow-500 transition"></i>
+                </a>
+                <a href="#facilities"
+                    class="mobile-link text-2xl font-bold text-blue-900 flex justify-between items-center group">
+                    Facilities <i
+                        class="fas fa-chevron-right text-sm text-gray-300 group-hover:text-yellow-500 transition"></i>
+                </a>
+                <a href="#admission"
+                    class="mobile-link text-2xl font-bold text-blue-900 flex justify-between items-center group">
+                    Admission <i
+                        class="fas fa-chevron-right text-sm text-gray-300 group-hover:text-yellow-500 transition"></i>
+                </a>
+                <a href="#gallery"
+                    class="mobile-link text-2xl font-bold text-blue-900 flex justify-between items-center group">
+                    Gallery <i
+                        class="fas fa-chevron-right text-sm text-gray-300 group-hover:text-yellow-500 transition"></i>
+                </a>
+                <a href="#Careers"
+                    class="mobile-link text-2xl font-bold text-blue-900 flex justify-between items-center group">
+                    Careers <i
+                        class="fas fa-chevron-right text-sm text-gray-300 group-hover:text-yellow-500 transition"></i>
+                </a>
+            </div>
+
+            <div class="mt-auto p-8 bg-gray-50 border-t border-gray-100">
+                <p class="text-xs uppercase tracking-widest text-gray-400 font-bold mb-4">Quick Contact</p>
+                <div class="flex flex-col gap-3">
+                    <a href="tel:+914622574117" class="flex items-center gap-3 text-blue-900 font-semibold">
+                        <div class="w-8 h-8 rounded-full bg-blue-100 flex items-center justify-center text-blue-600">
+                            <i class="fas fa-phone-alt text-xs"></i>
+                        </div>
+                        +91 (462) 257 4117
+                    </a>
+                    <a href="mailto:bellschool1992@gmail.com"
+                        class="flex items-center gap-3 text-blue-900 font-semibold">
+                        <div
+                            class="w-8 h-8 rounded-full bg-yellow-100 flex items-center justify-center text-yellow-600">
+                            <i class="fas fa-envelope text-xs"></i>
+                        </div>
+                        bellschool1992@gmail.com
+                    </a>
+                </div>
+
+                <a href="tel:+914622574117"
+                    class="mt-8 block w-full bg-blue-600 text-white text-center py-4 rounded-xl font-bold shadow-lg shadow-blue-200">
+                    Enquire Now
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <script>
+        const menuBtn = document.getElementById('menu-btn');
+        const closeBtn = document.getElementById('close-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const mobileLinks = document.querySelectorAll('.mobile-link');
+
+        // Open Menu
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.remove('translate-x-full');
+        });
+
+        // Close Menu
+        closeBtn.addEventListener('click', () => {
+            mobileMenu.classList.add('translate-x-full');
+        });
+
+        // Close menu when a link is clicked
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('translate-x-full');
+            });
+        });
+    </script>
+
+
+
+
+
+
+
+
+
+    <!-- <section class="relative h-[450px] md:h-[650px] flex items-center justify-center overflow-hidden bg-yellow-500">
+        <div class="absolute inset-0 z-0">
+            <img src="images/Bell-School-about-4.png" alt="About Bell School"
+                class="w-full h-full object-cover scale-110 transition-transform  origin-center"
+                >
+            <div class="absolute inset-0 bg-gradient-to-b from-yellow-500/50 via-yellow-500/70 to-yellow-500"></div>
+        </div>
+
+        <div class="absolute top-20 left-10 w-48 h-48 bg-yellow-500/15 rounded-full blur-3xl animate-blob"></div>
+        <div
+            class="absolute bottom-10 right-10 w-72 h-72 bg-white/10 rounded-full blur-3xl animate-blob animation-delay-2000">
+        </div>
+
+        <div class="relative z-10 text-center text-white px-6 max-w-4xl">
+            <nav class="inline-flex items-center gap-3 mb-8 px-5 py-2 bg-white/10 backdrop-blur-xl rounded-full border border-white/20 "
+                >
+                <a href="index.html"
+                    class="text-[#ffd700] hover:text-white transition-colors font-semibold text-sm">Home</a>
+                <span class="w-1.5 h-1.5 bg-white/40 rounded-full"></span>
+                <span class="text-white/80 text-sm font-medium tracking-wide">About Us</span>
+            </nav>
+
+            <h1 class="text-2xl md:text-4xl font-bold mb-6 tracking-tight "
+                >
+                Our Legacy of <span class="relative inline-block text-[#ffd700] italic">Excellence
+                    <svg class="absolute -bottom-2 left-0 w-full h-4" viewBox="0 0 100 10" preserveAspectRatio="none">
+                        <path d="M0 5 Q 25 0 50 5 T 100 5" stroke="#FFD700" stroke-width="3" fill="transparent" />
+                    </svg>
+                </span>
+            </h1>
+
+            <p class="max-w-2xl mx-auto text-white/90 text-lg md:text-xl font-light leading-relaxed "
+                id="hero-subtitle">
+                Crafting a tradition of academic brilliance and holistic growth in Tirunelveli <span
+                    class="text-[#ffd700] font-bold">since 1992</span>.
+            </p>
+        </div>
+
+        <div class="absolute bottom-0 left-0 w-full overflow-hidden leading-[0]">
+            <svg class="relative block w-[calc(100%+1.3px)] h-[80px]" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                <path
+                    d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.83C1132.19,118.92,1055.71,111.31,985.66,92.83Z"
+                    fill="#F9FAFB"></path>
+            </svg>
+        </div>
+    </section> -->
+
+
+    <section class="relative h-[300px] md:h-[480px] flex items-center overflow-hidden">
+        
+        <div class="absolute inset-0 z-0">
+            <img src="images/inner-bg.png" 
+                 alt="Bell School Campus" 
+                 class="w-full h-full object-cover">
+            <div class="absolute inset-0 bg-gradient-to-r from-[#f26522]/10 to-black/40"></div>
+        </div>
+
+        <div class="max-w-7xl mx-auto relative z-10 w-full">
+            <div class="text-white">
+                
+                <nav class="flex mb-4 text-sm md:text-base font-medium opacity-90" aria-label="Breadcrumb">
+                    <ol class="inline-flex items-center space-x-1 md:space-x-3">
+                        <li class="inline-flex items-center">
+                            <a href="/" class="hover:text-[#ffcc4d] transition-colors duration-300">
+                                <i class="fa-solid fa-house mr-2"></i> Home
+                            </a>
+                        </li>
+                        <li>
+                            <div class="flex items-center">
+                                <i class="fa-solid fa-chevron-right text-xs mx-2"></i>
+                                <span class="text-[#ffcc4d]">About Us</span>
+                            </div>
+                        </li>
+                    </ol>
+                </nav>
+
+                <h1 class="text-4xl md:text-6xl font-extrabold tracking-tight drop-shadow-md">
+                    About Us
+                </h1>
+                
+                <p class="mt-8 text-lg md:text-xl font-light max-w-2xl opacity-90 border-l-4 border-[#ffcc4d] pl-4">
+                    Crafting a tradition of academic brilliance and holistic growth in Tirunelveli <span
+                    class="text-[#ffd700] font-bold">since 1992</span>.
+                </p>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- <section class="bg-slate-50">
+        <div class="relative z-20 -mt-16 max-w-7xl mx-auto px-6">
+            <div
+                class="bg-white rounded-[2.5rem] shadow-2xl p-8 md:p-12 grid grid-cols-2 lg:grid-cols-4 gap-8 border-b-[10px] border-primary reveal">
+                <div class="text-center border-r border-slate-100 last:border-0 group">
+                    <div
+                        class="text-xl md:text-3xl font-bold text-[#1a7440] mb-2 group-hover:text-[#ffd700] transition-colors">
+                        <span class="counter" data-target="32">0</span>+
+                    </div>
+                    <p class="text-slate-400 uppercase tracking-[0.2em] text-[10px] font-black">Years of Legacy</p>
+                </div>
+                <div class="text-center border-r border-slate-100 last:border-0 group">
+                    <div
+                        class="text-xl md:text-3xl font-bold text-[#1a7440] mb-2 group-hover:text-[#ffd700] transition-colors">
+                        <span class="counter" data-target="2500">0</span>+
+                    </div>
+                    <p class="text-slate-400 uppercase tracking-[0.2em] text-[10px] font-black">Success Stories</p>
+                </div>
+                <div class="text-center border-r border-slate-100 last:border-0 group">
+                    <div
+                        class="text-xl md:text-3xl font-bold text-[#1a7440] mb-2 group-hover:text-[#ffd700] transition-colors">
+                        <span class="counter" data-target="150">0</span>+
+                    </div>
+                    <p class="text-slate-400 uppercase tracking-[0.2em] text-[10px] font-black">Expert Mentors</p>
+                </div>
+                <div class="text-center group">
+                    <div
+                        class="text-xl md:text-3xl font-bold text-[#1a7440] mb-2 group-hover:text-[#ffd700] transition-colors">
+                        <span class="counter" data-target="100">0</span>%
+                    </div>
+                    <p class="text-slate-400 uppercase tracking-[0.2em] text-[10px] font-black">Result Record</p>
+                </div>
+            </div>
+        </div>
+    </section> -->
+
+    <section class="py-24 bg-slate-50 overflow-hidden">
+        <div class=" mx-auto px-6 max-w-7xl">
+            <div class="flex flex-col lg:flex-row items-center gap-20">
+                <div class="w-full lg:w-1/2 relative reveal">
+                    <div
+                        class="relative z-10 rounded-[3rem] overflow-hidden shadow-2xl border-[12px] border-white -rotate-2 hover:rotate-0 transition-transform duration-700">
+                        <img src="images/Bell-School-building-2.png" alt="Bell School"
+                            class="w-full h-[550px] object-cover">
+                    </div>
+                    <div class="absolute -top-10 -left-10 w-64 h-64 bg-yellow-500 rounded-full opacity-20 blur-3xl"></div>
+                    <div class="absolute -bottom-10 -right-10 w-40 h-16 bg-yellow-500 rounded-full blur-xl opacity-40">
+                    </div>
+                    <div class="absolute -bottom-6 -left-6 bg-[#1a7440] p-8 rounded-3xl shadow-xl hidden md:block z-20">
+                        <p class="text-white text-2xl font-serif italic">"Building Character"</p>
+                    </div>
+                </div>
+
+                <div class="w-full lg:w-1/2 reveal">
+                    <span
+                        class="inline-block px-4 py-1 rounded-full bg-yellow-500/10 text-[#1a7440] text-xs font-bold uppercase tracking-widest mb-6 border border-primary/20">Our
+                        Purpose</span>
+                    <h2 class="text-xl md:text-3xl font-bold text-[#1a7440] mb-8 leading-tight">
+                        Molding Character, <br><span class="text-slate-400 font-serif italic">Not Just Careers.</span>
+                    </h2>
+
+                    <div class="space-y-10">
+                        <div class="flex gap-6 group">
+                            <div
+                                class="w-16 h-16 shrink-0 bg-white shadow-lg rounded-2xl flex items-center justify-center group-hover:bg-[#1a7440] transition-all duration-500">
+                                <i class="fas fa-eye text-2xl text-[#1a7440] group-hover:text-[#ffd700]"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-lg font-bold text-[#1a7440] mb-2">A Visionary Beginning</h4>
+                                <p class="text-slate-600 leading-relaxed italic">
+                                    Bell Matriculation Higher Secondary School is a community of life long learners that
+                                    demonstrates the knowledge, skills, and values required for productive global
+                                    citizenship.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="flex gap-6 group">
+                            <div
+                                class="w-16 h-16 shrink-0 bg-white shadow-lg rounded-2xl flex items-center justify-center group-hover:bg-[#1a7440] transition-all duration-500">
+                                <i class="fas fa-rocket text-2xl text-[#1a7440] group-hover:text-[#ffd700]"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-lg font-bold text-[#1a7440] mb-2">Our Mission</h4>
+                                <p class="text-slate-600 leading-relaxed">
+                                    Bell Matriculation Higher Secondary School, a caring and collaborative learning
+                                    institution, ensures that each student achieves intellectual and personal
+                                    excellence, well prepared for his/her career pathways.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-24 relative overflow-hidden bg-gray-950">
+        <div class="absolute inset-0 z-0 opacity-30 pointer-events-none" 
+             style="background-image: url('images/Bell-School-about-1.png'); background-size: cover; background-position: center; background-repeat: no-repeat;">
+        </div>
+        <div class="max-w-7xl mx-auto px-6 max-w-5xl relative z-10">
+            <div class="reveal text-center">
+                <div class="w-20 h-1 bg-yellow-500 mx-auto mb-10"></div>
+                <h2 class="text-[#ffd700] text-sm font-black uppercase tracking-[0.3em] mb-12">Leadership Insight</h2>
+
+                <blockquote class="text-xl md:text-3xl text-white font-light italic leading-snug mb-12">
+                    "Educating the mind without educating the heart is <span class="text-[#ffd700]">no education at
+                        all</span>."
+                </blockquote>
+
+                <div class="inline-flex items-center gap-4 text-left">
+                    <div
+                        class="w-16 h-16 rounded-full bg-yellow-500/20 border border-primary/40 flex items-center justify-center text-[#ffd700] font-bold">
+                        C</div>
+                    <div>
+                        <h5 class="text-xl font-bold text-white">Mr. Charles Gnana Sekar Y.</h5>
+                        <p class="text-[#ffd700]/70 text-sm uppercase tracking-widest font-medium">Principal</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-14 bg-gradient-to-b from-white to-slate-50 overflow-hidden">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-14 reveal">
+                <span
+                    class="inline-block px-4 py-1.5 mb-4 text-[10px] font-black tracking-[0.3em] text-[#ffd700] uppercase bg-yellow-500/10 rounded-full">Leadership</span>
+                <h2 class="text-2xl md:text-3xl font-bold text-[#1a7440] mb-6">Board of Governors</h2>
+                <div class="w-24 h-1.5 bg-yellow-500 mx-auto rounded-full"></div>
+                <p class="mt-8 text-slate-500 max-w-xl mx-auto font-light leading-relaxed">
+                    Guided by visionaries and educators committed to nurturing the next generation of global leaders.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-8">
+
+                <div class="reveal group transition-delay-100">
+                    <div
+                        class="relative p-8 rounded-[2rem] bg-white border border-slate-100 shadow-sm hover:shadow-2xl hover:-translate-y-2 transition-all duration-500 text-center">
+                        <div class="relative w-28 h-28 mx-auto mb-8">
+                            <div
+                                class="absolute inset-0 rounded-full border-2 border-dashed border-primary/30 group-hover:rotate-180 transition-transform duration-[3000ms]">
+                            </div>
+                            <div
+                                class="absolute inset-2 bg-gradient-to-tr from-[#1a7440] to-[#1a7440]/80 rounded-full shadow-lg flex items-center justify-center text-3xl text-[#ffd700] font-serif italic border-4 border-white">
+                                D
+                            </div>
+                        </div>
+                        <div class="relative z-10">
+                            <h4
+                                class="font-bold text-[#1a7440] text-lg mb-3 group-hover:text-[#ffd700] transition-colors">
+                                Dr. A. <br> Chelladhurai</h4>
+                            <p class="text-slate-400 text-[12px] font-black uppercase tracking-[0.2em]">Founder</p>
+                            <div class="h-0.5 w-0 group-hover:w-12 bg-yellow-500 mx-auto mt-4 transition-all duration-500">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="reveal group transition-delay-200">
+                    <div
+                        class="relative p-8 rounded-[2rem] bg-white border border-slate-100 shadow-sm hover:shadow-2xl hover:-translate-y-2 transition-all duration-500 text-center">
+                        <div class="relative w-28 h-28 mx-auto mb-8">
+                            <div
+                                class="absolute inset-0 rounded-full border-2 border-dashed border-primary/30 group-hover:rotate-180 transition-transform duration-[3000ms]">
+                            </div>
+                            <div
+                                class="absolute inset-2 bg-gradient-to-tr from-[#1a7440] to-[#1a7440]/80 rounded-full shadow-lg flex items-center justify-center text-3xl text-[#ffd700] font-serif italic border-4 border-white">
+                                G
+                            </div>
+                        </div>
+                        <h4 class="font-bold text-[#1a7440] text-lg mb-3 group-hover:text-[#ffd700] transition-colors">Mr.
+                            C. <br> Gunasingh</h4>
+                        <p class="text-slate-400 text-[12px] font-black uppercase tracking-[0.2em]">Correspondent</p>
+                        <div class="h-0.5 w-0 group-hover:w-12 bg-yellow-500 mx-auto mt-4 transition-all duration-500">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="reveal group transition-delay-300">
+                    <div
+                        class="relative p-8 rounded-[2rem] bg-white border border-slate-100 shadow-sm hover:shadow-2xl hover:-translate-y-2 transition-all duration-500 text-center">
+                        <div class="relative w-28 h-28 mx-auto mb-8">
+                            <div
+                                class="absolute inset-0 rounded-full border-2 border-dashed border-primary/30 group-hover:rotate-180 transition-transform duration-[3000ms]">
+                            </div>
+                            <div
+                                class="absolute inset-2 bg-gradient-to-tr from-[#1a7440] to-[#1a7440]/80 rounded-full shadow-lg flex items-center justify-center text-3xl text-[#ffd700] font-serif italic border-4 border-white">
+                                P
+                            </div>
+                        </div>
+                        <h4 class="font-bold text-[#1a7440] text-lg mb-3 group-hover:text-[#ffd700] transition-colors">
+                            Mrs. G. <br> Pushpalatha</h4>
+                        <p class="text-slate-400 text-[12px] font-black uppercase tracking-[0.2em]">Director</p>
+                        <div class="h-0.5 w-0 group-hover:w-12 bg-yellow-500 mx-auto mt-4 transition-all duration-500">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="reveal group transition-delay-400">
+                    <div
+                        class="relative p-8 rounded-[2rem] bg-white border border-slate-100 shadow-sm hover:shadow-2xl hover:-translate-y-2 transition-all duration-500 text-center">
+                        <div class="relative w-28 h-28 mx-auto mb-8">
+                            <div
+                                class="absolute inset-0 rounded-full border-2 border-dashed border-primary/30 group-hover:rotate-180 transition-transform duration-[3000ms]">
+                            </div>
+                            <div
+                                class="absolute inset-2 bg-gradient-to-tr from-[#1a7440] to-[#1a7440]/80 rounded-full shadow-lg flex items-center justify-center text-3xl text-[#ffd700] font-serif italic border-4 border-white">
+                                C
+                            </div>
+                        </div>
+                        <h4 class="font-bold text-[#1a7440] text-lg mb-3 group-hover:text-[#ffd700] transition-colors">Mr.
+                            <br> Charles Sekar
+                        </h4>
+                        <p class="text-slate-400 text-[12px] font-black uppercase tracking-[0.2em]">Principal</p>
+                        <div class="h-0.5 w-0 group-hover:w-12 bg-yellow-500 mx-auto mt-4 transition-all duration-500">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="reveal group transition-delay-500">
+                    <div
+                        class="relative p-8 rounded-[2rem] bg-white border border-slate-100 shadow-sm hover:shadow-2xl hover:-translate-y-2 transition-all duration-500 text-center">
+                        <div class="relative w-28 h-28 mx-auto mb-8">
+                            <div
+                                class="absolute inset-0 rounded-full border-2 border-dashed border-primary/30 group-hover:rotate-180 transition-transform duration-[3000ms]">
+                            </div>
+                            <div
+                                class="absolute inset-2 bg-gradient-to-tr from-[#1a7440] to-[#1a7440]/80 rounded-full shadow-lg flex items-center justify-center text-3xl text-[#ffd700] font-serif italic border-4 border-white">
+                                V
+                            </div>
+                        </div>
+                        <h4 class="font-bold text-[#1a7440] text-lg mb-3 group-hover:text-[#ffd700] transition-colors">
+                            Mrs. <br> Vijaya Sunder</h4>
+                        <p class="text-slate-400 text-[12px] font-black uppercase tracking-[0.2em]">Admin Officer</p>
+                        <div class="h-0.5 w-0 group-hover:w-12 bg-yellow-500 mx-auto mt-4 transition-all duration-500">
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- Footer -->
+    <footer class="bg-yellow-950 text-white pt-16 pb-8">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+                <!-- About -->
+                <div class="space-y-6">
+                    <div class="flex items-center gap-3 bg-white/10 p-4 rounded-xl w-fit reveal-left">
+                        <img src="images/Bell-Logo_1.jpg" alt="Bell School Logo"
+                            class="h-12 w-auto bg-white rounded-md p-1">
+                        <div>
+                            <h3 class="text-white font-bold text-lg">Bell School</h3>
+                            <p class="text-white/60 text-[10px] uppercase tracking-wider">Est. 1992</p>
+                        </div>
+                    </div>
+                    <p class="text-white/70 text-sm leading-relaxed reveal-left">
+                        A caring and collaborative learning institution, preparing students for personal and
+                        professional success in the global community.
+                    </p>
+                    <div class="flex gap-4 reveal-bottom">
+                        <a href="#"
+                            class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-yellow-500 hover:text-dark transition-all">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#"
+                            class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-yellow-500 hover:text-dark transition-all">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#"
+                            class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-yellow-500 hover:text-dark transition-all">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                        <a href="#"
+                            class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-yellow-500 hover:text-dark transition-all">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div class="reveal-left">
+                    <h4 class="text-white font-bold text-xl mb-6">Quick Links</h4>
+                    <ul class="space-y-3 text-sm text-white/80">
+                        <li><a href="about.html"
+                                class="hover:text-white transition-colors hover:translate-x-1 inline-block">About
+                                Us</a></li>
+                        <li><a href="academic.html"
+                                class="hover:text-white transition-colors hover:translate-x-1 inline-block">Academics</a>
+                        </li>
+                        <li><a href="admission.html"
+                                class="hover:text-white transition-colors hover:translate-x-1 inline-block">Admission
+                                Process</a></li>
+                        <li><a href="facilities.html"
+                                class="hover:text-white transition-colors hover:translate-x-1 inline-block">Campus
+                                Facilities</a></li>
+                        <li><a href="gallery.html"
+                                class="hover:text-white transition-colors hover:translate-x-1 inline-block">Photo
+                                Gallery</a></li>
+                        <li><a href="careers.html"
+                                class="hover:text-white transition-colors hover:translate-x-1 inline-block">Careers</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Contact Info -->
+                <div class="reveal-left">
+                    <h4 class="text-white font-bold text-xl mb-6">Contact Us</h4>
+                    <ul class="space-y-4 text-sm text-white/80">
+                        <li class="flex items-center gap-3">
+                            <i class="fas fa-phone-alt text-white shrink-0"></i>
+                            <a href="tel:+914622574117" class="hover:text-white transition-colors">+91 (462) 257
+                                4117</a>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <i class="fab fa-whatsapp text-white shrink-0"></i>
+                            <a href="tel:+919944674550" class="hover:text-white transition-colors">+91 99446 74550</a>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <i class="far fa-envelope text-white shrink-0"></i>
+                            <a href="mailto:bellschool1992@gmail.com"
+                                class="hover:text-white transition-colors">bellschool1992@gmail.com</a>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="fas fa-map-marker-alt text-white shrink-0 mt-1"></i>
+                            <span>Tiruchendur Road,<br> Kamaraj Nagar, Palayankottai,<br> Tirunelveli - 627 002</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- School Hours -->
+                <div class="reveal-left">
+                    <h4 class="text-white font-bold text-xl mb-6">School Hours</h4>
+                    <div class="bg-white/5 p-6 rounded-lg space-y-3">
+                        <div>
+                            <p class="text-[10px] text-white/60 mb-1 uppercase tracking-widest">Pre-KG to UKG</p>
+                            <p class="text-sm font-medium">9:00 AM - 3:00 PM</p>
+                        </div>
+                        <div>
+                            <p class="text-[10px] text-white/60 mb-1 uppercase tracking-widest">Classes 1 to 9</p>
+                            <p class="text-sm font-medium">8:45 AM - 4:10 PM</p>
+                        </div>
+                        <div>
+                            <p class="text-[10px] text-white/60 mb-1 uppercase tracking-widest">Classes 10 to 12</p>
+                            <p class="text-sm font-medium">8:00 AM - 5:00 PM</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="border-t border-white/10 pt-8 text-center reveal-bottom">
+                <p class="text-[10px] text-white/40 uppercase tracking-widest">
+                    &copy; <span id="current-year"></span> Bell Matriculation Higher Secondary School. All rights
+                    reserved.
+                </p>
+                <p class="text-[10px] text-white/40 mt-2">
+                    Designed with <i class="fas fa-heart text-red-500"></i> for EDU WEB TECHNOLOGIES
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const sr = ScrollReveal({
+            origin: 'top',
+            distance: '60px',
+            duration: 2000,
+            delay: 400,
+            reset: true
+        });
+
+        sr.reveal('.reveal-bottom', { origin: 'bottom' });
+        sr.reveal('.reveal-left', { origin: 'left' });
+        sr.reveal('.reveal-right', { origin: 'right' });
+    </script>
+
+</body>
+
+</html>

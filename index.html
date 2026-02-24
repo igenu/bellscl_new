@@ -26,6 +26,15 @@
             transform: translateY(-10px);
             transition: all 0.3s ease;
         }
+
+        /* Swiper Zoom Animation */
+        .swiper-slide-active .hero-bg {
+            animation: kenburns 10s ease-out forwards;
+        }
+        @keyframes kenburns {
+            from { transform: scale(1); }
+            to { transform: scale(1.1); }
+        }
     </style>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
@@ -33,14 +42,25 @@
 
 <body class="bg-gray-50 text-gray-800 overflow-x-hidden">
 
-    <nav class="bg-white shadow-md py-4 px-6 md:px-12 sticky top-0 z-[100]">
+    <nav class="bg-white shadow-md py-4 px-6 md:px-12 -sticky top-0 z-[100]">
         <div class="max-w-7xl mx-auto flex justify-between items-center">
-            <div class="flex items-center gap-2">
+            <!-- <div class="flex items-center gap-2">
                 <img src="images/Bell-Logo_1.jpg" alt="logo" class="w-10 h-10 md:w-12 md:h-12">
                 <span class="font-bold text-lg md:text-xl tracking-tight text-blue-900 leading-none">
                     BELL <span class="text-yellow-400">SCHOOL</span>
                 </span>
-            </div>
+            </div> -->
+            <a href="/" class="flex items-center gap-3 group">
+                <img id="nav-logo" src="images/Bell-Logo_1.jpg" alt="Bell School Logo" class="transition-all duration-300 object-contain h-10 w-auto -ml-2" style="height: 44px;">
+                <div class="flex flex-col">
+                    <span id="brand-name" class="font-bold text-[#f9a134] leading-tight transition-all duration-300 text-xl md:text-lg">
+                        BELL Matriculation
+                    </span>
+                    <span id="brand-subtext" class="text-[10px] md:text-xs text-[#527a63] uppercase tracking-widest md:block transition-all">
+                        Higher Secondary School
+                    </span>
+                </div>
+            </a>
 
             <div class="hidden lg:flex gap-8 font-medium text-gray-600">
                 <a href="#home" class="hover:text-yellow-600 transition">Home</a>
@@ -175,7 +195,7 @@
         });
     </script>
 
-    <section id="home" class="hero-clip school-blue min-h-screen- pt-24 pb-40 px-6 md:px-12 text-white relative">
+    <!-- <section id="home" class="hero-clip school-blue min-h-screen- pt-20 pb-40 px-6 md:px-12 text-white relative">
         <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center">
             <div class="reveal-left">
                 <h1 class="text-4xl md:text-6xl font-extrabold mb-6 leading-tight">
@@ -324,9 +344,9 @@ dots.forEach((dot, index) => {
 updateSlider();
 </script>
         </div>
-    </section>
+    </section> -->
 
-    <div id="videoModal" class="fixed inset-0 z-[99999] hidden items-center justify-center bg-black/90 p-4 transition-all duration-300">
+    <!-- <div id="videoModal" class="fixed inset-0 z-[99999] hidden items-center justify-center bg-black/90 p-4 transition-all duration-300">
         <button id="closeVideo" class="absolute top-6 right-6 text-white text-3xl hover:text-gray-300 transition-colors">
             <i class="fas fa-times"></i>
         </button>
@@ -341,9 +361,87 @@ updateSlider();
                 allowfullscreen>
             </iframe>
         </div>
-    </div>
+    </div> -->
 
-    <section class="max-w-7xl mx-auto -mt-16 relative z-10">
+    <div class="swiper mainHero h-[80vh] md:h-[88vh] relative">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide relative flex items-center px-8">
+                <img src="images/Bell-School-car-1.png" class="hero-bg absolute inset-0 w-full h-full object-cover" />
+                <div class="absolute inset-0 bg-black/50"></div>
+                <div class="w-[80rem] mx-auto relative z-10 text-white">
+                    <div class="max-w-3xl slide-content">
+                        <h5 class="flex items-center gap-3 text-[#f9a134] font-bold tracking-[0.2em] uppercase mb-4">
+                            <i class="fas fa-graduation-cap"></i> WELCOME TO EDUCA!
+                        </h5>
+                        <h1 class="text-3xl md:text-5xl font-extrabold leading-tight mb-6">
+                            Start Your Beautiful <br>And <span class="text-[#f9a134] italic">Bright</span> Future
+                        </h1>
+                        <p class="text-lg text-slate-200 mb-8 max-w-xl">
+                            There are many variations of passages lorem ipsum available but the majority have suffered alteration in some form.
+                        </p>
+                        <div class="flex gap-4">
+                            <button class="bg-[#f9a134] hover:bg-white hover:text-[#066a4c] px-6 py-3 rounded font-bold transition-all text-[15px]">ABOUT MORE <i class="fas fa-arrow-right ml-2"></i></button>
+                            <button class="bg-white text-[#066a4c] hover:bg-[#f9a134] hover:text-white px-6 py-3 rounded font-bold transition-all text-[15px]">LEARN MORE <i class="fas fa-arrow-right ml-2"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide relative flex items-center px-8">
+                <img src="images/Bell-School-about-1.png" class="hero-bg absolute inset-0 w-full h-full object-cover" />
+                <div class="absolute inset-0 bg-black/50"></div>
+                <div class="w-[80rem] mx-auto relative z-10 text-white">
+                    <div class="max-w-3xl slide-content">
+                        <h5 class="flex items-center gap-3 text-[#f9a134] font-bold tracking-[0.2em] uppercase mb-4">WORLD CLASS EDUCATION</h5>
+                        <h1 class="text-3xl md:text-5xl font-extrabold leading-tight mb-6">Empowering The <br><span class="text-[#f9a134] italic">Next</span> Generation</h1>
+                        <button class="bg-[#f9a134] hover:bg-white hover:text-[#066a4c] px-6 py-3 rounded font-bold transition-all text-[15px]">EXPLORE NOW</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="absolute bottom-[80px] right-10 flex gap-4 z-[9999]">
+            <div class="hero-prev w-12 h-12 rounded-full border border-white/30 flex items-center justify-center cursor-pointer hover:bg-[#f9a134] hover:border-primary text-white transition-all"><i class="fas fa-arrow-left"></i></div>
+            <div class="hero-next w-12 h-12 rounded-full border border-white/30 flex items-center justify-center cursor-pointer hover:bg-[#f9a134] hover:border-primary text-white transition-all"><i class="fas fa-arrow-right"></i></div>
+        </div>
+        <div class="swiper-pagination !left-10 !bottom-[80px] !w-auto !text-left"></div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+        // Hero Slider Init
+        const swipercar = new Swiper('.mainHero', {
+            loop: true,
+            effect: 'fade',
+            speed: 1000,
+            autoplay: { delay: 6000 },
+            pagination: { el: '.swiper-pagination', clickable: true },
+            navigation: { nextEl: '.hero-next', prevEl: '.hero-prev' },
+            on: {
+                slideChangeTransitionStart: function () {
+                    const contents = document.querySelectorAll('.slide-content');
+                    contents.forEach(c => {
+                        c.style.opacity = "0";
+                        c.style.transform = "translateY(40px)";
+                    });
+                },
+                slideChangeTransitionEnd: function () {
+                    const activeSlide = this.slides[this.activeIndex].querySelector('.slide-content');
+                    activeSlide.style.transition = "all 0.8s ease-out";
+                    activeSlide.style.opacity = "1";
+                    activeSlide.style.transform = "translateY(0)";
+                }
+            }
+        });
+
+        // Intersection Observer for Scroll Animations
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) entry.target.classList.add('active');
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.reveal-card').forEach(card => observer.observe(card));
+    </script>
+
+    <section class="max-w-7xl mx-auto -mt-12 relative z-10">
     <div class="grid md:grid-cols-3 gap-6">
         <div class="bg-yellow-400 p-8 rounded-2xl shadow-xl card-hover reveal-bottom">
             <i class="fas fa-microscope text-3xl mb-4 text-blue-900"></i>
@@ -371,7 +469,7 @@ updateSlider();
     </div>
 </section>
 
-    <section id="about" class="py-24 max-w-7xl mx-auto overflow-hidden">
+    <section id="about" class="py-16 max-w-7xl mx-auto overflow-hidden">
         <div class="grid md:grid-cols-12 gap-8 items-start mb-12">
             <div class="md:col-span-5 pt-8 h-full flex items-end reveal-bottom">
                 <div class="flex flex-col items-start gap-2 h-full justify-between">
@@ -411,7 +509,7 @@ updateSlider();
         </div>
     </section>
 
-    <section id="academics" class="bg-blue-900 py-24 px-6 text-white">
+    <section id="academics" class="bg-blue-900 py-16 px-6 text-white">
         <div class="max-w-7xl mx-auto">
             <div class="text-center mb-16 reveal-bottom">
                 <h2 class="text-4xl font-bold mb-4">Our Academic Wings</h2>
@@ -460,174 +558,173 @@ updateSlider();
 
 
 
-
-    <style>
-        /* Smooth transition for the accordion content */
-        .accordion-content {
-            transition: max-height 0.4s ease-in-out, padding 0.4s ease-in-out, opacity 0.4s ease-in-out;
-            max-height: 0;
-            opacity: 0;
-        }
-
-        .accordion-item.active .accordion-content {
-            opacity: 1;
-        }
-    </style>
-    <section class="py-20 px-6 overflow-hidden">
-        <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
-
-            <div class="lg:col-span-4 flex flex-col items-start">
-                <div class="reveal-right">
-                    <svg class="w-10 h-10 text-yellow-400 fill-current mb-4" viewBox="0 0 24 24"
-                        xmlns="http://www.w3.org/2000/svg">
-                        <path d="M12 0L14.59 9.41L24 12L14.59 14.59L12 24L9.41 14.59L0 12L9.41 9.41L12 0Z" />
-                    </svg>
+    <section id="campus-life" class="py-16 bg-white overflow-hidden">
+    <div class="max-w-7xl mx-auto">
+        
+        <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-8">
+            <div class="max-w-2xl">
+                <div class="flex items-center gap-3 mb-4">
+                    <span class="w-12 h-[2px] bg-[#f26522]"></span>
+                    <span class="text-[#f26522] font-bold uppercase tracking-widest text-xs">Our Environment</span>
                 </div>
-
-                <h2 class="text-4xl lg:text-5xl font-bold text-[#0A1D37] leading-tight mb-8 reveal-left">
-                    Answers for<br>The Questions
+                <h2 class="text-2xl md:text-3xl font-black text-slate-900 leading-tight">
+                    Where Learning <span class="text-[#f26522]">Meets</span> Life
                 </h2>
-
-                <button
-                    class="bg-[#FF6B35] text-white px-8 py-3.5 rounded-md font-semibold hover:bg-[#e85b24] transition-colors duration-300 shadow-md reveal-bottom">
-                    Ask A Question
-                </button>
             </div>
-
-            <div class="lg:col-span-8 flex flex-col gap-4 reveal-right">
-
-                <div class="accordion-item bg-[#FFF9F5] rounded-xl overflow-hidden">
-                    <button class="accordion-btn w-full px-6 py-5 flex justify-between items-center focus:outline-none">
-                        <span class="font-bold text-[#0A1D37] text-lg text-left">What extracurricular activities are
-                            offered?</span>
-                        <div
-                            class="icon-container flex-shrink-0 w-8 h-8 rounded-full bg-[#5B75F0] text-white flex items-center justify-center transition-colors duration-300 ml-4">
-                            <i class="fa-solid fa-play text-xs ml-0.5"></i>
-                        </div>
-                    </button>
-                    <div class="accordion-content px-6 overflow-hidden text-gray-600 leading-relaxed">
-                        <p class="pb-5">We offer a wide variety of activities including sports, arts, music, coding
-                            clubs, and leadership programs to ensure holistic development.</p>
-                    </div>
-                </div>
-
-                <div class="accordion-item bg-[#FFF9F5] rounded-xl overflow-hidden">
-                    <button class="accordion-btn w-full px-6 py-5 flex justify-between items-center focus:outline-none">
-                        <span class="font-bold text-[#0A1D37] text-lg text-left">How can parents get involved?</span>
-                        <div
-                            class="icon-container flex-shrink-0 w-8 h-8 rounded-full bg-[#5B75F0] text-white flex items-center justify-center transition-colors duration-300 ml-4">
-                            <i class="fa-solid fa-play text-xs ml-0.5"></i>
-                        </div>
-                    </button>
-                    <div class="accordion-content px-6 overflow-hidden text-gray-600 leading-relaxed">
-                        <p class="pb-5">Parents can join our active Parent-Teacher Association, volunteer for school
-                            events, or participate in our regular open house workshops.</p>
-                    </div>
-                </div>
-
-                <div class="accordion-item bg-[#FFF9F5] rounded-xl overflow-hidden active">
-                    <button class="accordion-btn w-full px-6 py-5 flex justify-between items-center focus:outline-none">
-                        <span class="font-bold text-[#0A1D37] text-lg text-left">What is the student-to-teacher
-                            ratio?</span>
-                        <div
-                            class="icon-container flex-shrink-0 w-8 h-8 rounded-full bg-[#0A1D37] text-white flex items-center justify-center transition-colors duration-300 ml-4">
-                            <i class="fa-solid fa-minus text-xs"></i>
-                        </div>
-                    </button>
-                    <div class="accordion-content px-6 overflow-hidden text-gray-600 leading-relaxed"
-                        style="max-height: 200px;">
-                        <p class="pb-5">Our ratio is approximately 22 : 1, with 1 teacher and 2 teaching assistants for
-                            every class, ensuring personalized attention for each student.</p>
-                    </div>
-                </div>
-
-                <div class="accordion-item bg-[#FFF9F5] rounded-xl overflow-hidden">
-                    <button class="accordion-btn w-full px-6 py-5 flex justify-between items-center focus:outline-none">
-                        <span class="font-bold text-[#0A1D37] text-lg text-left">What meals are provided in
-                            school?</span>
-                        <div
-                            class="icon-container flex-shrink-0 w-8 h-8 rounded-full bg-[#5B75F0] text-white flex items-center justify-center transition-colors duration-300 ml-4">
-                            <i class="fa-solid fa-play text-xs ml-0.5"></i>
-                        </div>
-                    </button>
-                    <div class="accordion-content px-6 overflow-hidden text-gray-600 leading-relaxed">
-                        <p class="pb-5">We provide nutritious, balanced hot meals prepared daily by our on-site chefs,
-                            catering to various dietary requirements and allergies.</p>
-                    </div>
-                </div>
-
-                <div class="accordion-item bg-[#FFF9F5] rounded-xl overflow-hidden">
-                    <button class="accordion-btn w-full px-6 py-5 flex justify-between items-center focus:outline-none">
-                        <span class="font-bold text-[#0A1D37] text-lg text-left">How often are parent-teacher meetings
-                            held?</span>
-                        <div
-                            class="icon-container flex-shrink-0 w-8 h-8 rounded-full bg-[#5B75F0] text-white flex items-center justify-center transition-colors duration-300 ml-4">
-                            <i class="fa-solid fa-play text-xs ml-0.5"></i>
-                        </div>
-                    </button>
-                    <div class="accordion-content px-6 overflow-hidden text-gray-600 leading-relaxed">
-                        <p class="pb-5">Formal parent-teacher meetings are held at the end of every term, though parents
-                            can request a meeting with teachers at any point during the academic year.</p>
-                    </div>
-                </div>
-
+            
+            <div class="flex flex-wrap gap-2 p-1 bg-gray-100 rounded-2xl border border-gray-200">
+                <button onclick="filterGallery('all')" class="filter-btn active px-6 py-2.5 rounded-xl text-sm font-bold transition-all">All</button>
+                <button onclick="filterGallery('academics')" class="filter-btn px-6 py-2.5 rounded-xl text-sm font-bold transition-all text-gray-500 hover:text-black">Academics</button>
+                <button onclick="filterGallery('innovation')" class="filter-btn px-6 py-2.5 rounded-xl text-sm font-bold transition-all text-gray-500 hover:text-black">Innovation</button>
+                <button onclick="filterGallery('sports')" class="filter-btn px-6 py-2.5 rounded-xl text-sm font-bold transition-all text-gray-500 hover:text-black">Sports</button>
             </div>
         </div>
-    </section>
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script>
-        // Initialize Animate on Scroll
-        AOS.init({
-            once: true, // Animation happens only once while scrolling down
-            offset: 50,
+
+        <div id="gallery-grid" class="grid grid-cols-1 md:grid-cols-12 gap-6">
+            
+            <div class="md:col-span-6 group relative h-[300px] rounded-[2.5rem] overflow-hidden shadow-2xl gallery-item innovation">
+                <img src="images/Bell-School-about-1.png" class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105" alt="Digital Lab">
+                <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-900/20 to-transparent"></div>
+                <div class="absolute bottom-0 left-0 p-10 w-full transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
+                    <div class="flex items-center gap-3 mb-4">
+                        <span class="px-4 py-1 bg-[#ffcc4d] text-black text-[10px] font-black rounded-full uppercase">Digital & Art Lab</span>
+                    </div>
+                    <h3 class="text-white text-3xl font-bold mb-3">Creative Innovation Space</h3>
+                    <p class="text-gray-300 text-sm max-w-lg opacity-0 group-hover:opacity-100 transition-opacity duration-700 delay-100">
+                        Equipped with Adobe Creative Suite and DSLR cameras, empowering students to explore animation, digital art, and storytelling.
+                    </p>
+                </div>
+            </div>
+
+            <div class="md:col-span-3 group relative h-[300px] rounded-[2.5rem] overflow-hidden shadow-xl gallery-item academics">
+                <img src="images/Bell-School-about-2.png" class="w-full h-full object-cover grayscale-[20%] group-hover:grayscale-0 transition-all duration-700" alt="Science">
+                <div class="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors"></div>
+                <div class="absolute top-6 right-6">
+                    <div class="w-12 h-12 bg-white/20 backdrop-blur-md rounded-full flex items-center justify-center text-white border border-white/30">
+                        <i class="fas fa-microscope"></i>
+                    </div>
+                </div>
+                <div class="absolute bottom-8 left-8">
+                    <h3 class="text-white text-xl font-bold">Practical Excellence</h3>
+                    <p class="text-white/70 text-xs mt-1">Advanced Physics & Chemistry Labs</p>
+                </div>
+            </div>
+            <div class="md:col-span-3 group relative h-[300px] rounded-[2.5rem] overflow-hidden shadow-xl gallery-item academics">
+                <img src="images/Bell-School-about-2.png" class="w-full h-full object-cover grayscale-[20%] group-hover:grayscale-0 transition-all duration-700" alt="Science">
+                <div class="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors"></div>
+                <div class="absolute top-6 right-6">
+                    <div class="w-12 h-12 bg-white/20 backdrop-blur-md rounded-full flex items-center justify-center text-white border border-white/30">
+                        <i class="fas fa-microscope"></i>
+                    </div>
+                </div>
+                <div class="absolute bottom-8 left-8">
+                    <h3 class="text-white text-xl font-bold">Practical Excellence</h3>
+                    <p class="text-white/70 text-xs mt-1">Advanced Physics & Chemistry Labs</p>
+                </div>
+            </div>
+
+            <div class="md:col-span-4 group relative h-[300px] rounded-[2.5rem] overflow-hidden shadow-lg gallery-item sports">
+                <img src="images/Bell-School-about-3.png" class="w-full h-full object-cover" alt="Sports">
+                <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity bg-[#f26522]/80">
+                    <button class="bg-white text-[#f26522] px-6 py-2 rounded-full font-bold transform -rotate-12">View Field</button>
+                </div>
+            </div>
+
+            <div class="md:col-span-8 flex gap-6">
+                <div class="group relative h-[300px] rounded-[2.5rem] overflow-hidden shadow-lg gallery-item academics">
+                <img src="images/Bell-School-car-1.png" class="w-full h-full object-cover" alt="Campus">
+                <div class="absolute inset-0 bg-gradient-to-r from-black/60 to-transparent flex items-center p-12">
+                    <div class="max-w-xs">
+                        <h3 class="text-white text-2xl font-bold mb-2">6 Acre Sprawling Campus</h3>
+                        <p class="text-white/60 text-sm italic">"Surrounded by a garden of trees."</p>
+                    </div>
+                </div>
+                </div>
+                <div class="group relative h-[300px] rounded-[2.5rem] overflow-hidden shadow-lg gallery-item academics">
+                <img src="images/digital-lab.jpg" class="w-full h-full object-cover" alt="Campus">
+                <div class="absolute inset-0 bg-gradient-to-r from-black/60 to-transparent flex items-center p-12">
+                    <div class="max-w-xs">
+                        <h3 class="text-white text-2xl font-bold mb-2">6 Acre Sprawling Campus</h3>
+                        <p class="text-white/60 text-sm italic">"Surrounded by a garden of trees."</p>
+                    </div>
+                </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="mt-10 flex justify-center">
+        <a href="gallery.html" class="group relative px-6 py-3 bg-slate-950 text-white rounded-full overflow-hidden transition-transform hover:scale-105 active:scale-95 shadow-2xl">
+            <span class="relative z-10 text-[14px] font-black tracking-widest">ENTER FULL EXPERIENCE</span>
+            <div class="absolute inset-0 bg-gradient-to-r from-[#f26522] to-[#ffcc4d] translate-y-full group-hover:translate-y-0 transition-transform duration-500"></div>
+        </a>
+    </div>
+    </div>
+</section>
+
+<style>
+    .filter-btn.active {
+        background-color: white;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+        color: #f26522;
+    }
+    
+    .gallery-item {
+        transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    
+    .gallery-item.hidden-item {
+        opacity: 0;
+        transform: scale(0.8);
+        display: none;
+    }
+</style>
+
+<script>
+    function filterGallery(category) {
+        // Update Buttons
+        const btns = document.querySelectorAll('.filter-btn');
+        btns.forEach(btn => {
+            btn.classList.remove('active', 'text-black');
+            btn.classList.add('text-gray-500');
         });
+        event.currentTarget.classList.add('active', 'text-black');
 
-        // Accordion Logic
-        document.addEventListener('DOMContentLoaded', () => {
-            const accordionBtns = document.querySelectorAll('.accordion-btn');
-
-            accordionBtns.forEach(btn => {
-                btn.addEventListener('click', function () {
-                    const currentItem = this.parentElement;
-                    const currentContent = this.nextElementSibling;
-                    const currentIconContainer = this.querySelector('.icon-container');
-
-                    const isActive = currentItem.classList.contains('active');
-
-                    // 1. Close all accordions first (Optional: remove this block to allow multiple open items)
-                    document.querySelectorAll('.accordion-item').forEach(item => {
-                        item.classList.remove('active');
-                        item.querySelector('.accordion-content').style.maxHeight = null;
-
-                        // Reset all icons to 'play' and light blue
-                        const iconCont = item.querySelector('.icon-container');
-                        iconCont.classList.remove('bg-[#0A1D37]');
-                        iconCont.classList.add('bg-[#5B75F0]');
-                        iconCont.innerHTML = '<i class="fa-solid fa-play text-xs ml-0.5"></i>';
-                    });
-
-                    // 2. If the clicked item wasn't active, open it
-                    if (!isActive) {
-                        currentItem.classList.add('active');
-                        currentContent.style.maxHeight = currentContent.scrollHeight + "px";
-
-                        // Change icon to 'minus' and dark blue
-                        currentIconContainer.classList.remove('bg-[#5B75F0]');
-                        currentIconContainer.classList.add('bg-[#0A1D37]');
-                        currentIconContainer.innerHTML = '<i class="fa-solid fa-minus text-xs"></i>';
-                    }
-                });
-            });
+        // Filter Items
+        const items = document.querySelectorAll('.gallery-item');
+        items.forEach(item => {
+            if (category === 'all' || item.classList.contains(category)) {
+                item.classList.remove('hidden-item');
+                setTimeout(() => { item.style.opacity = '1'; item.style.transform = 'scale(1)'; }, 10);
+            } else {
+                item.classList.add('hidden-item');
+            }
         });
-    </script>
+    }
+
+    // Add mouse parallax effect to featured items
+    document.querySelectorAll('.gallery-item').forEach(card => {
+        card.addEventListener('mousemove', e => {
+            let rect = card.getBoundingClientRect();
+            let x = e.clientX - rect.left;
+            let y = e.clientY - rect.top;
+            let dx = (x - rect.width / 2) / (rect.width / 2);
+            let dy = (y - rect.height / 2) / (rect.height / 2);
+            card.querySelector('img').style.transform = `scale(1.1) translate(${dx * 10}px, ${dy * 10}px)`;
+        });
+        card.addEventListener('mouseleave', () => {
+            card.querySelector('img').style.transform = `scale(1) translate(0,0)`;
+        });
+    });
+</script>
+    
 
 
-    <section id="facilities" class="bg-[#0A1D37] py-20 px-6 overflow-hidden">
+    <section id="facilities" class="bg-[#0A1D37] py-16 px-6 overflow-hidden">
         <div class="max-w-7xl mx-auto">
             <div class="flex justify-between items-end mb-12">
                 <div class="reveal-left">
-                    <span class="text-blue-400 uppercase tracking-widest text-sm font-bold">Infrastructure</span>
-                    <h2 class="text-white text-4xl font-bold mt-2">Salient Facilities</h2>
+                    <span class="text-blue-400 uppercase tracking-widest text-sm font-bold">World-Class Infrastructure</span>
+                    <h2 class="text-white text-4xl font-bold mt-2">Our Facilities</h2>
                 </div>
                 <div class="flex gap-4 reveal-right">
                     <button
@@ -648,7 +745,7 @@ updateSlider();
                         <div
                             class="bg-white rounded-3xl p-8 h-full flex flex-col items-center text-center group hover:bg-blue-600 transition-colors duration-500">
                             <div
-                                class="w-32 h-32 rounded-full overflow-hidden mb-6 border-4 border-gray-100 group-hover:border-white/30">
+                                class="w-32 h-32 rounded-lg overflow-hidden mb-6 border-4 border-gray-100 group-hover:border-white/30">
                                 <img src="images/science-lab.jpg" class="w-full h-full object-cover" alt="Science Lab">
                             </div>
                             <h3 class="text-2xl font-bold text-blue-900 group-hover:text-white mb-2">Modern Labs</h3>
@@ -670,7 +767,7 @@ updateSlider();
                         <div
                             class="bg-white rounded-3xl p-8 h-full flex flex-col items-center text-center group hover:bg-blue-600 transition-colors duration-500">
                             <div
-                                class="w-32 h-32 rounded-full overflow-hidden mb-6 border-4 border-gray-100 group-hover:border-white/30">
+                                class="w-32 h-32 rounded-lg overflow-hidden mb-6 border-4 border-gray-100 group-hover:border-white/30">
                                 <img src="images/digital-lab.jpg" class="w-full h-full object-cover" alt="Digital Lab">
                             </div>
                             <h3 class="text-2xl font-bold text-blue-900 group-hover:text-white mb-2">Digital & Art Lab
@@ -693,7 +790,7 @@ updateSlider();
                         <div
                             class="bg-white rounded-3xl p-8 h-full flex flex-col items-center text-center group hover:bg-blue-600 transition-colors duration-500">
                             <div
-                                class="w-32 h-32 rounded-full overflow-hidden mb-6 border-4 border-gray-100 group-hover:border-white/30">
+                                class="w-32 h-32 rounded-lg overflow-hidden mb-6 border-4 border-gray-100 group-hover:border-white/30">
                                 <img src="images/rifle-range.png" class="w-full h-full object-cover" alt="Rifle Range">
                             </div>
                             <h3 class="text-2xl font-bold text-blue-900 group-hover:text-white mb-2">Rifle Shooting</h3>
@@ -715,7 +812,7 @@ updateSlider();
                         <div
                             class="bg-white rounded-3xl p-8 h-full flex flex-col items-center text-center group hover:bg-blue-600 transition-colors duration-500">
                             <div
-                                class="w-32 h-32 rounded-full overflow-hidden mb-6 border-4 border-gray-100 group-hover:border-white/30">
+                                class="w-32 h-32 rounded-lg overflow-hidden mb-6 border-4 border-gray-100 group-hover:border-white/30">
                                 <img src="images/library.jpg" class="w-full h-full object-cover" alt="Library">
                             </div>
                             <h3 class="text-2xl font-bold text-blue-900 group-hover:text-white mb-2">Knowledge Hub</h3>
@@ -793,55 +890,10 @@ updateSlider();
         }
     </style>
 
-    <div class="max-w-7xl mx-auto py-24">
-        <div class="grid grid-cols-1 md:grid-cols-12 gap-4 items-start">
-
-            <div class="md:col-span-3 flex flex-col items-center md:items-start">
-                <div class="w-full overflow-hidden rounded-sm mb-6 reveal-left">
-                    <img src="images/Bell-School-about-1.png" alt="Outdoor Learning"
-                        class="w-full img-tall object-cover hover:scale-105 transition-transform duration-700">
-                </div>
-                <button
-                    class="px-8 py-2 border border-slate-400 rounded-full text-sm text-slate-700 hover:bg-slate-50 transition-colors reveal-bottom">
-                    See All Photos
-                </button>
-            </div>
-
-            <div class="md:col-span-3 flex flex-col md:pt-10">
-                <div class="mb-6 reveal-right">
-                    <span class="text-[10px] uppercase tracking-[0.2em] font-bold text-slate-400">Gallery</span>
-                    <h2 class="text-4xl font-bold text-[#1e293b] mt-1">Our School Life </h2>
-                </div>
-                <div class="w-full overflow-hidden rounded-sm reveal-bottom">
-                    <img src="images/Bell-School-about-2.png" alt="Classroom Engagement"
-                        class="w-full img-med object-cover hover:scale-105 transition-transform duration-700">
-                </div>
-            </div>
-
-            <div class="md:col-span-6 flex flex-col space-y-6">
-                <div class="flex gap-2 items-end reveal-right">
-                    <div class="w-5/6" style="transition-delay: 400ms;">
-                        <p class="text-slate-500 text-sm leading-relaxed ">
-                            Explore the vibrant life at Bell School through our gallery, capturing the energy and
-                            creativity of our students.
-                        </p>
-                    </div>
-
-                    <div class="w-3/6 overflow-hidden rounded-sm">
-                        <img src="images/Bell-School-about-3.png" alt="Students Entrance"
-                            class="w-full img-small object-cover hover:scale-105 transition-transform duration-700">
-                    </div>
-                </div>
+    
 
 
-                <div class="w-full overflow-hidden rounded-sm reveal-bottom">
-                    <img src="images/Bell-School-about-4.png" alt="Joyful Learning"
-                        class="w-full img-wide object-cover hover:scale-105 transition-transform duration-700">
-                </div>
-            </div>
-
-        </div>
-    </div>
+    
 
 
 

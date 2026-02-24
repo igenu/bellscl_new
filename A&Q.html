@@ -1,0 +1,159 @@
+<style>
+        /* Smooth transition for the accordion content */
+        .accordion-content {
+            transition: max-height 0.4s ease-in-out, padding 0.4s ease-in-out, opacity 0.4s ease-in-out;
+            max-height: 0;
+            opacity: 0;
+        }
+
+        .accordion-item.active .accordion-content {
+            opacity: 1;
+        }
+    </style>
+    <section class="py-20 px-6 overflow-hidden">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+
+            <div class="lg:col-span-4 flex flex-col items-start">
+                <div class="reveal-right">
+                    <svg class="w-10 h-10 text-yellow-400 fill-current mb-4" viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12 0L14.59 9.41L24 12L14.59 14.59L12 24L9.41 14.59L0 12L9.41 9.41L12 0Z" />
+                    </svg>
+                </div>
+
+                <h2 class="text-4xl lg:text-5xl font-bold text-[#0A1D37] leading-tight mb-8 reveal-left">
+                    Answers for<br>The Questions
+                </h2>
+
+                <button
+                    class="bg-[#FF6B35] text-white px-8 py-3.5 rounded-md font-semibold hover:bg-[#e85b24] transition-colors duration-300 shadow-md reveal-bottom">
+                    Ask A Question
+                </button>
+            </div>
+
+            <div class="lg:col-span-8 flex flex-col gap-4 reveal-right">
+
+                <div class="accordion-item bg-[#FFF9F5] rounded-xl overflow-hidden">
+                    <button class="accordion-btn w-full px-6 py-5 flex justify-between items-center focus:outline-none">
+                        <span class="font-bold text-[#0A1D37] text-lg text-left">What extracurricular activities are
+                            offered?</span>
+                        <div
+                            class="icon-container flex-shrink-0 w-8 h-8 rounded-full bg-[#5B75F0] text-white flex items-center justify-center transition-colors duration-300 ml-4">
+                            <i class="fa-solid fa-play text-xs ml-0.5"></i>
+                        </div>
+                    </button>
+                    <div class="accordion-content px-6 overflow-hidden text-gray-600 leading-relaxed">
+                        <p class="pb-5">We offer a wide variety of activities including sports, arts, music, coding
+                            clubs, and leadership programs to ensure holistic development.</p>
+                    </div>
+                </div>
+
+                <div class="accordion-item bg-[#FFF9F5] rounded-xl overflow-hidden">
+                    <button class="accordion-btn w-full px-6 py-5 flex justify-between items-center focus:outline-none">
+                        <span class="font-bold text-[#0A1D37] text-lg text-left">How can parents get involved?</span>
+                        <div
+                            class="icon-container flex-shrink-0 w-8 h-8 rounded-full bg-[#5B75F0] text-white flex items-center justify-center transition-colors duration-300 ml-4">
+                            <i class="fa-solid fa-play text-xs ml-0.5"></i>
+                        </div>
+                    </button>
+                    <div class="accordion-content px-6 overflow-hidden text-gray-600 leading-relaxed">
+                        <p class="pb-5">Parents can join our active Parent-Teacher Association, volunteer for school
+                            events, or participate in our regular open house workshops.</p>
+                    </div>
+                </div>
+
+                <div class="accordion-item bg-[#FFF9F5] rounded-xl overflow-hidden active">
+                    <button class="accordion-btn w-full px-6 py-5 flex justify-between items-center focus:outline-none">
+                        <span class="font-bold text-[#0A1D37] text-lg text-left">What is the student-to-teacher
+                            ratio?</span>
+                        <div
+                            class="icon-container flex-shrink-0 w-8 h-8 rounded-full bg-[#0A1D37] text-white flex items-center justify-center transition-colors duration-300 ml-4">
+                            <i class="fa-solid fa-minus text-xs"></i>
+                        </div>
+                    </button>
+                    <div class="accordion-content px-6 overflow-hidden text-gray-600 leading-relaxed"
+                        style="max-height: 200px;">
+                        <p class="pb-5">Our ratio is approximately 22 : 1, with 1 teacher and 2 teaching assistants for
+                            every class, ensuring personalized attention for each student.</p>
+                    </div>
+                </div>
+
+                <div class="accordion-item bg-[#FFF9F5] rounded-xl overflow-hidden">
+                    <button class="accordion-btn w-full px-6 py-5 flex justify-between items-center focus:outline-none">
+                        <span class="font-bold text-[#0A1D37] text-lg text-left">What meals are provided in
+                            school?</span>
+                        <div
+                            class="icon-container flex-shrink-0 w-8 h-8 rounded-full bg-[#5B75F0] text-white flex items-center justify-center transition-colors duration-300 ml-4">
+                            <i class="fa-solid fa-play text-xs ml-0.5"></i>
+                        </div>
+                    </button>
+                    <div class="accordion-content px-6 overflow-hidden text-gray-600 leading-relaxed">
+                        <p class="pb-5">We provide nutritious, balanced hot meals prepared daily by our on-site chefs,
+                            catering to various dietary requirements and allergies.</p>
+                    </div>
+                </div>
+
+                <div class="accordion-item bg-[#FFF9F5] rounded-xl overflow-hidden">
+                    <button class="accordion-btn w-full px-6 py-5 flex justify-between items-center focus:outline-none">
+                        <span class="font-bold text-[#0A1D37] text-lg text-left">How often are parent-teacher meetings
+                            held?</span>
+                        <div
+                            class="icon-container flex-shrink-0 w-8 h-8 rounded-full bg-[#5B75F0] text-white flex items-center justify-center transition-colors duration-300 ml-4">
+                            <i class="fa-solid fa-play text-xs ml-0.5"></i>
+                        </div>
+                    </button>
+                    <div class="accordion-content px-6 overflow-hidden text-gray-600 leading-relaxed">
+                        <p class="pb-5">Formal parent-teacher meetings are held at the end of every term, though parents
+                            can request a meeting with teachers at any point during the academic year.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        // Initialize Animate on Scroll
+        AOS.init({
+            once: true, // Animation happens only once while scrolling down
+            offset: 50,
+        });
+
+        // Accordion Logic
+        document.addEventListener('DOMContentLoaded', () => {
+            const accordionBtns = document.querySelectorAll('.accordion-btn');
+
+            accordionBtns.forEach(btn => {
+                btn.addEventListener('click', function () {
+                    const currentItem = this.parentElement;
+                    const currentContent = this.nextElementSibling;
+                    const currentIconContainer = this.querySelector('.icon-container');
+
+                    const isActive = currentItem.classList.contains('active');
+
+                    // 1. Close all accordions first (Optional: remove this block to allow multiple open items)
+                    document.querySelectorAll('.accordion-item').forEach(item => {
+                        item.classList.remove('active');
+                        item.querySelector('.accordion-content').style.maxHeight = null;
+
+                        // Reset all icons to 'play' and light blue
+                        const iconCont = item.querySelector('.icon-container');
+                        iconCont.classList.remove('bg-[#0A1D37]');
+                        iconCont.classList.add('bg-[#5B75F0]');
+                        iconCont.innerHTML = '<i class="fa-solid fa-play text-xs ml-0.5"></i>';
+                    });
+
+                    // 2. If the clicked item wasn't active, open it
+                    if (!isActive) {
+                        currentItem.classList.add('active');
+                        currentContent.style.maxHeight = currentContent.scrollHeight + "px";
+
+                        // Change icon to 'minus' and dark blue
+                        currentIconContainer.classList.remove('bg-[#5B75F0]');
+                        currentIconContainer.classList.add('bg-[#0A1D37]');
+                        currentIconContainer.innerHTML = '<i class="fa-solid fa-minus text-xs"></i>';
+                    }
+                });
+            });
+        });
+    </script>
